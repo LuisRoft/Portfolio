@@ -1,50 +1,79 @@
 ---
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
+import NavBar from '../components/NavBar.astro';
+import { getLangFromUrl } from "../i18n/utils"
+
+
 interface Props {
+	description: string
 	title: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="robots" content="index, follow" />
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+		<script>
+			if (
+			  localStorage.theme === 'dark' ||
+			  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+			  document.documentElement.classList.add('dark');
+			} else {
+			  document.documentElement.classList.remove('dark');
+			}
+		  </script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="dark:bg-textPrimary bg-skeleton antialiased pt-10 pb-20 2xl:text-lg selection:bg-secondary selection:text-textPrimary dark:selection:bg-gray-700 dark:selection:text-darKText">
+		<NavBar />
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: 'Poppins', sans-serif;
+		scroll-behavior: smooth;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	body {
+		background-color:#F1F2F6;
 	}
 </style>
+
+<script is:inline>
+	const theme = (() => {
+	  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+		return localStorage.getItem("theme");
+	  }
+	  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		return "dark";
+	  }
+	  return "light";
+	})();
+  
+	if (theme === "light") {
+	  document.documentElement.classList.remove("dark");
+	} else {
+	  document.documentElement.classList.add("dark");
+	}
+	window.localStorage.setItem("theme", theme);
+</script>

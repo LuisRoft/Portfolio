@@ -1,0 +1,94 @@
+---
+import CVButton from "./CVButton.astro";
+import SubSection from "./SubSection.astro";
+import Techology from "./Techology.astro";
+import TimeLine from "./TimeLine.astro";
+
+import { getI18N } from "../i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<section class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
+    <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10">
+        <picture class="w-full h-40 flex">
+            <img src="/avatar.jpg" class="w-40 h-40 object-cover rounded-lg" alt="avatar">
+        </picture>
+        <h1 class="text-primary dark:text-darKText mt-4 font-bold tracking-tight sm:text-xl">
+            Luis Velasco
+        </h1>
+        <div class="flex w-full">
+            <span id="type-writter" class="text-primary dark:text-darkTextSecondary"></span>
+        </div>
+        <ul class="mt-4">
+            <li>
+                <a href="https://www.linkedin.com/in/luisvelasco27/" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
+                    <i class="uil uil-linkedin"></i>
+                    <span>luisVelasco02</span>
+                    
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/LuisRoft" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
+                    <i class="uil uil-github"></i>
+                    <span>luisRoftl</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/LuisRoftl" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
+                    <i class="uil uil-twitter"></i>
+                    <span>luisRoftl</span>
+                </a>
+            </li>
+            <CVButton />
+        </ul>
+    </div>
+    <div class="flex-1">
+        <SubSection title={i18n.SOBRE_MI}>
+            {i18n.SOBRE_MI_DESC}
+        </SubSection>
+
+        <SubSection title={i18n.TECH_FAVORITAS} margin={true}>
+            {i18n.TECH_FAVORITAS_DESC}
+        </SubSection>
+        <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            
+            <Techology text="ReactJs">
+                <i class="devicon-react-original colored"></i>
+            </Techology>
+            <Techology text="NextJS">
+                <i class="devicon-nextjs-plain colored"></i>
+            </Techology>
+            <Techology text="NodeJs">
+                <i class="devicon-nodejs-plain colored"></i>
+            </Techology>
+            <Techology text="NestJs">
+                <i class="devicon-nestjs-original colored"></i>
+            </Techology>
+            <Techology text="Astro">
+                <i class="devicon-astro-plain colored"></i>
+            </Techology>
+            <Techology text="TypeScript">
+                <i class="devicon-typescript-plain colored"></i>
+            </Techology>
+            <Techology text="Docker">
+                <i class="devicon-docker-plain colored"></i>
+            </Techology>
+        </ul>
+
+        <SubSection title={i18n.EXPERIENCIA} margin={true}>
+            {i18n.EXPERIENCIA_DESC}
+        </SubSection>
+        <TimeLine />
+</section>
+
+<script>
+    import Typed from 'typed.js'
+
+    new Typed('#type-writter', {
+        strings: ['Fronted Developer', 'Backend Developer', 'Full Stack Developer', 'Software Engineer'],
+        typeSpeed: 70,
+        loop: true,
+    });
+</script>

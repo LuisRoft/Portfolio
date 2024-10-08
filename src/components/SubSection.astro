@@ -1,0 +1,14 @@
+---
+interface Props {
+    title: string;
+    margin?: boolean;
+}
+
+const { title, margin } = Astro.props;
+---
+<h2 class={`font-semibold text-textPrimary dark:text-darKText text-lg ${margin ? "mt-12" : null}`}>
+    {title}
+</h2>
+<p class="dark:text-darkTextSecondary mt-3 max-w-prose leading-relaxed text-gray-700">
+    <slot />
+</p>

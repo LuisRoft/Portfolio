@@ -1,0 +1,33 @@
+---
+import LanguagePicker from "./LanguagePicker.astro"
+import NavBarLink from "./NavBarLink.astro"
+import ThemeToogle from "./ThemeToogle.astro"
+import { getLangFromUrl, useTranslations, useTranslatedPath, } from '../i18n/utils';
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+<header class="flex flex-col sm:flex-row gap-y-2 items-center justify-center mb-16 w-full relative">
+  <nav class="rounded-lg dark:bg-darkBg bg-secondary mx-auto overflow-x-auto px-4 sm:overflow-x-visible w-5/6 max-w-min sm:w-auto sm:mr-auto">
+    <ul class="flex items-center justify-start">
+        <li>
+          <NavBarLink href={translatePath('/')}>
+            {t('nav.inicio')}
+          </NavBarLink>
+        </li>
+        <li><NavBarLink href={translatePath('/proyectos')}>
+          {t('nav.proyectos')}
+        </NavBarLink></li>
+        <li><NavBarLink href='/blog'>
+          {t('nav.blog')}
+        </NavBarLink></li>
+    </ul>
+  </nav>
+  
+  <div class="sm:absolute sm:right-0 flex items-center gap-2 font-semibold sm:pr-10">
+    <ThemeToogle />
+    <LanguagePicker />
+  </div>
+</header>

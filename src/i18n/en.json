@@ -1,0 +1,63 @@
+{
+  "SEO_TITLE": "Home | Luis Velasco",
+  "SEO_DESCRIPTION": "Page description",
+  "SEO": {
+    "PROYECTOS_TITLE": "Projects | Luis Velasco",
+    "PROYECTOS_DESCRIPTION": "Description of the projects page",
+    "BLOG_TITLE": "Blog",
+    "BLOG_DESCRIPTION": "Description of the blog page"
+  },
+  "HEADER": {
+    "INICIO": "Home",
+    "PROYECTOS": "Projects",
+    "BLOG": "Blog"
+  },
+
+  "CV": "Download CV",
+  "SOBRE_MI": "About Me",
+  "SOBRE_MI_DESC": "Hi! My name is Luis, I am a Software Engineer specialized in web development and the application of best practices to ensure software maintainability. Passionate about technology and software development.",
+  "TECH_FAVORITAS": "Favorite Technologies",
+  "TECH_FAVORITAS_DESC": "Throughout my career development, I have worked with various technologies, and I am passionate about exploring new libraries, frameworks, and programming languages. Here's a list.",
+  "EXPERIENCIA": "Experience",
+  "EXPERIENCIA_DESC": "My work experience has focused on developing web applications, both frontend and backend. Here’s a summary of my experience.",
+  "MAS_RECIENTE": "Most Recent",
+  "EXPERIENCIAS": {
+    "AFIF_EXPERIENCIA_COMPANY": "Afifsystems",
+    "AFIF_EXPERIENCIA_ROL": "Full Stack Developer",
+    "AFIF_EXPERIENCIA_FECHA": "August 2024 - Present",
+    "AFIF_EXPERIENCIA_DESC": "Development of custom software solutions. Implementation and optimization of microservices architecture, improving system scalability and maintainability. Experience managing CI/CD pipelines using BitBucket, ensuring efficient and smooth deployment processes. Using Docker for containerization and leveraging AWS services for robust cloud-based solutions.",
+
+    "GENESIS_EXPERIENCIA_COMPANY": "Genesis",
+    "GENESIS_EXPERIENCIA_ROL": "Full Stack Developer",
+    "GENESIS_EXPERIENCIA_FECHA": "June 2024 - July 2024",
+    "GENESIS_EXPERIENCIA_DESC": "Developed an application that uses the OpenAI API for comparing quotes through image analysis. I learned about the OpenAI API and its integration into projects using NestJS.",
+
+    "MANACLOUD_EXPERIENCIA_COMPANY": "ManaCloud",
+    "MANACLOUD_EXPERIENCIA_ROL": "Frontend Developer",
+    "MANACLOUD_EXPERIENCIA_FECHA": "January 2024 - April 2024",
+    "MANACLOUD_EXPERIENCIA_DESC": "Contributed to the development of a meal reservation platform that improved organizational control by allowing users to reserve meals for the company’s cafeteria. My responsibilities included implementing CRUD for managing periods, meals, and schedules in the administration section. I also collaborated in developing the main user interface for meal reservations."
+  },
+
+  "PROYECTOS": "Projects",
+  "PROYECTOS_DESC": "Here you will find a list of projects I have carried out throughout my career. Some are personal, and others are projects I have done for clients.",
+  "PROYECTOS_PERSONALES": "Personal Projects",
+  "PROYECTOS_PERSONALES_LISTA": {
+    "PROYECTO_UTRACE": "Utrace",
+    "PROYECTO_UTRACE_DESC": "uTrace is a mobile application developed with React Native that allows you to track and manage your daily emotions and activities. It also features a reporting function to visualize your emotional progress.",
+    "PROYECTO_CINEMAN": "Cineman",
+    "PROYECTO_CINEMAN_DESC": "Cineman is a movie application to search for information about movies such as: most popular movies, upcoming releases, and specific movie details (rating, category, and related movies). Additionally, the app allows you to mark your favorite movies.",
+    "PROYECTO_MICRO_SHOP": "Micro Shop",
+    "PROYECTO_MICRO_SHOP_DESC": "Micro-Nest-Shop is a demonstration project that implements a microservices architecture using NestJS. The project simulates a basic online store with services for users, products, and orders. Although it currently lacks full business logic or database interaction, it serves as an excellent foundation for understanding and building microservices-based systems with NestJS.",
+    "PROYECTO_POKEDEX": "Pokedex",
+    "PROYECTO_POKEDEX_DESC": "Pokedex is an API that allows users to perform CRUD operations. The API features a Pokémon database and allows users to search, edit, and delete Pokémon by name/ID."
+  },
+  "PROYECTOS_PROFESIONALES": "Professional Projects",
+  "PROYECTOS_PROFESIONALES_LISTA": {
+    "PROYECTO_ROSVEP": "Rosvep",
+    "PROYECTO_ROSVEP_DESC": "Rosvep is a landing page for a brand promotion service company. The website features a modern and attractive design, as well as a services section and a contact form.",
+    "PROYECTO_GENESIS": "Genesis Pro-Forma",
+    "PROYECTO_GENESIS_DESC": "This is a full-stack project consisting of a web application and a REST API. The web app allows users to upload images of quotes and obtain a comparative table of products and prices, highlighting the cheapest prices and from which supplier they come. The OpenAI API was used for price comparison.",
+    "PROYECTO_PUCEM": "PUCEM Medical System - Frontend",
+    "PROYECTO_PUCEM_DESC": "This is a web system developed for the Pontifical Catholic University of Ecuador, Manabí (PUCEM), covering three areas of health sciences: medicine, physiotherapy, and nursing. The system is part of the project for medical follow-up of dependent people within Portoviejo."
+  }
+}

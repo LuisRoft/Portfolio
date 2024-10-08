@@ -1,0 +1,63 @@
+{
+  "SEO_TITLE": "Inicio | Luis Velasco",
+  "SEO_DESCRIPTION": "Descripción de la página",
+  "SEO": {
+    "PROYECTOS_TITLE": "Proyectos | Luis Velasco",
+    "PROYECTOS_DESCRIPTION": "Descripción de la página de proyectos",
+    "BLOG_TITLE": "Blog",
+    "BLOG_DESCRIPTION": "Descripción de la página de blog"
+  },
+  "HEADER": {
+    "INICIO": "Inicio",
+    "PROYECTOS": "Proyectos",
+    "BLOG": "Blog"
+  },
+
+  "CV": "Descargar CV",
+  "SOBRE_MI": "Sobre mí",
+  "SOBRE_MI_DESC": "Hola! Mi nombre es Luis, soy Ingeniero de Software especializado en desarrollo web y aplicacion de buenas practicas para asegurar la mantenibilidad del software. Apasionado por la tecnologia y el desarrollo de software.",
+  "TECH_FAVORITAS": "Tecnologías Favoritas",
+  "TECH_FAVORITAS_DESC": "A lo largo del desarrollo de mi carrera he trabajado con diversas tecnologias, soy un apasionado por la exploracion de nuevas librerias, frameworks y lenguajes de programacion. Aqui una lista.",
+  "EXPERIENCIA": "Experiencia",
+  "EXPERIENCIA_DESC": "Mi experiencia laboral se ha centrado en el desarrollo de aplicaciones web, tanto en el frontend como en el backend. Aqui un resumen de mi experiencia.",
+  "MAS_RECIENTE": "Más Reciente",
+  "EXPERIENCIAS": {
+    "AFIF_EXPERIENCIA_COMPANY": "Afifsystems",
+    "AFIF_EXPERIENCIA_ROL": "Desarrollador Full Stack",
+    "AFIF_EXPERIENCIA_FECHA": "Agosto 2024 - Actualidad",
+    "AFIF_EXPERIENCIA_DESC": "Desarrollo de soluciones de software a medida. Implementación y optimización de arquitectura de microservicios, mejorando la escalabilidad y mantenibilidad del sistema. Experiencia en la gestión de pipelines CI / CD utilizando BitBucket, asegurando procesos de despliegue eficientes y sin problemas. Utilizar Docker para la contenerización y aprovechar los servicios de AWS para soluciones robustas basadas en la nube.",
+
+    "GENESIS_EXPERIENCIA_COMPANY": "Genesis",
+    "GENESIS_EXPERIENCIA_ROL": "Desarrollador Full Stack",
+    "GENESIS_EXPERIENCIA_FECHA": "Junio 2024 - Julio 2024",
+    "GENESIS_EXPERIENCIA_DESC": "Desarrolle una aplicación que utiliza la API OpenAI para la comparación de proformas mediante el análisis de imágenes. Aprendí sobre la API OpenAI y su integración en proyectos con nestjs.",
+
+    "MANACLOUD_EXPERIENCIA_COMPANY": "ManaCloud",
+    "MANACLOUD_EXPERIENCIA_ROL": "Desarrollador Fronted",
+    "MANACLOUD_EXPERIENCIA_FECHA": "Enero 2024 - Abril 2024",
+    "MANACLOUD_EXPERIENCIA_DESC": "Contribuí al desarrollo de una plataforma de reserva de comidas que mejoraba el control organizativo al permitir a los usuarios reservar comidas para el comedor de la empresa. Mis responsabilidades incluyeron la implementación de CRUD para la gestión de periodos, comidas y horarios en la sección de administración. También colaboré en el desarrollo de la interfaz de usuario principal para las reservas de comida."
+  },
+
+  "PROYECTOS": "Proyectos",
+  "PROYECTOS_DESC": "Aquí encontrarás una lista de proyectos que he realizado a lo largo de mi carrera. Algunos de ellos son personales y otros son proyectos que he realizado para clientes.",
+  "PROYECTOS_PERSONALES": "Proyectos Personales",
+  "PROYECTOS_PERSONALES_LISTA": {
+    "PROYECTO_UTRACE": "Utrace",
+    "PROYECTO_UTRACE_DESC": "uTrace es una aplicación móvil desarrollada con React Native que te permite rastrear y gestionar tus emociones diarias, así como tus actividades. También cuenta con una función de informes para visualizar tu progreso emocional.",
+    "PROYECTO_CINEMAN": "Cineman",
+    "PROYECTO_CINEMAN_DESC": "Cineman es una aplicación de cine para buscar información sobre películas como: películas más populares, próximos estrenos, información específica de la película (puntaje, categoría y películas relacionadas). Además, la aplicación cuenta con la opcion para marcas tus películas favoritas.",
+    "PROYECTO_MICRO_SHOP": "Micro Shop",
+    "PROYECTO_MICRO_SHOP_DESC": "Micro-Nest-Shop es un proyecto de demostración que implementa una arquitectura de microservicios utilizando NestJS. El proyecto simula una tienda en línea básica con servicios para usuarios, productos y pedidos. Aunque actualmente no tiene una lógica de negocio completa ni interacción con bases de datos, sirve como una excelente base para entender y construir sistemas basados en microservicios con NestJS.",
+    "PROYECTO_POKEDEX": "Pokedex",
+    "PROYECTO_POKEDEX_DESC": "Pokedex es una api que permite a los usuarios realizar peticiones de tipo CRUD. La api cuenta con una base de datos de pokemones y permite a los usuarios buscar, editar y eliminar pokemones por nombres/ids"
+  },
+  "PROYECTOS_PROFESIONALES": "Proyectos Profesionales",
+  "PROYECTOS_PROFESIONALES_LISTA": {
+    "PROYECTO_ROSVEP": "Rosvep",
+    "PROYECTO_ROSVEP_DESC": "Rosvep es una landing page para una empresa de servicios de impulsar marcs. La página web cuenta con un diseño moderno y atractivo, así como una sección de servicios y un formulario de contacto.",
+    "PROYECTO_GENESIS": "Genesis Proformas",
+    "PROYECTO_GENESIS_DESC": "Este es un proyecto full stack que consta de una aplicación web y una API REST. La aplicación web permite a los usuarios subir imagenes de las proformas y obtener una tabla comparativa de los productos y precios, marcando los precios mas baratos y de que proveedor es. Se utilizo la api de OpenAI para la comparación de precios.",
+    "PROYECTO_PUCEM": "Sistema Medico PUCEM - Fronted",
+    "PROYECTO_PUCEM_DESC": "Este es un sistema web desarrollado para la Pontificia Universidad Católica del Ecuador Sede Manabí (PUCEM), que abarca tres áreas de las ciencias de la salud: medicina, fisioterapia y enfermería. El sistema forma parte del proyecto de seguimiento médico a personas dependientes dentro de Portoviejo."
+  }
+}
