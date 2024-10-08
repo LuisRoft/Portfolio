@@ -1,11 +1,11 @@
 {
   "SEO_TITLE": "Home | Luis Velasco",
-  "SEO_DESCRIPTION": "Page description",
+  "SEO_DESCRIPTION": "I'm Luis Velasco, a software engineer specialized in web development. This is my portfolio and here you will find information about my experience, projects and blog.",
   "SEO": {
     "PROYECTOS_TITLE": "Projects | Luis Velasco",
-    "PROYECTOS_DESCRIPTION": "Description of the projects page",
+    "PROYECTOS_DESCRIPTION": "In this page you will find a list of projects that I have done throughout my career. Some of them are personal and others are projects I have done for clients.",
     "BLOG_TITLE": "Blog",
-    "BLOG_DESCRIPTION": "Description of the blog page"
+    "BLOG_DESCRIPTION": "Blog of Luis Velasco, web developer. Here you will find articles about web development, technology and more."
   },
   "HEADER": {
     "INICIO": "Home",

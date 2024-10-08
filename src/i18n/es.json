@@ -1,11 +1,11 @@
 {
   "SEO_TITLE": "Inicio | Luis Velasco",
-  "SEO_DESCRIPTION": "Descripción de la página",
+  "SEO_DESCRIPTION": "Soy Luis Velasco, un ingeniero de software especializado en desarrollo web. Este es mi portafolio y aqui encontrarás información sobre mi experiencia, proyectos y blog.",
   "SEO": {
     "PROYECTOS_TITLE": "Proyectos | Luis Velasco",
-    "PROYECTOS_DESCRIPTION": "Descripción de la página de proyectos",
+    "PROYECTOS_DESCRIPTION": "En este pagina encontrarás una lista de proyectos que he realizado a lo largo de mi carrera. Algunos de ellos son personales y otros son proyectos que he realizado para clientes.",
     "BLOG_TITLE": "Blog",
-    "BLOG_DESCRIPTION": "Descripción de la página de blog"
+    "BLOG_DESCRIPTION": "Este es el blog de Luis Velasco, ingeniero de software especializado en desarrollo web. Aquí encontrarás artículos sobre tecnología, desarrollo de software y buenas prácticas."
   },
   "HEADER": {
     "INICIO": "Inicio",

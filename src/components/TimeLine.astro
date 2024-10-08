@@ -1,13 +1,12 @@
 ---
-import TimelineItem  from './TimelineItem.astro';
-
+import TimelineItem from './TimelineItem.astro';
 import { getTimelineItems } from '../data/experiences';
-const { currentLocale } = Astro
+const { currentLocale } = Astro;
 
-const items = getTimelineItems(currentLocale ?? "")
+const items = getTimelineItems(currentLocale ?? "");
 ---
 
-<ol class="relative mt-6 border-s border-gray-200 dark:border-gray-700">
+<ol class="relative mt-4 sm:mt-6 border-l border-gray-200 dark:border-gray-700">
   {items.map(item => (
     <TimelineItem 
       title={item.title} 
