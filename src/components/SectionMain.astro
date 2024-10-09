@@ -5,6 +5,7 @@ import Techology from "./Techology.astro";
 import TimeLine from "./TimeLine.astro";
 
 import { getI18N } from "../i18n"
+import { techs } from "../data/technologies";
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -18,30 +19,32 @@ const i18n = getI18N({ currentLocale })
         <h1 class="text-primary dark:text-darKText mt-4 font-bold tracking-tight sm:text-xl">
             Luis Velasco
         </h1>
-        <div class="">
+        <div>
             <span id="type-writter" class="text-primary dark:text-darkTextSecondary"></span>
         </div>
         <ul class="mt-4 flex flex-col items-center sm:items-start">
             <li>
-                <a href="https://www.linkedin.com/in/luisvelasco27/" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
+                <a aria-label="Linkedin profile of Luis Velasco" href="https://www.linkedin.com/in/luisvelasco27/" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
                     <i class="uil uil-linkedin"></i>
-                    <span>luisVelasco02</span>
+                    luisVelasco02
                     
                 </a>
             </li>
             <li>
-                <a href="https://github.com/LuisRoft" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
+                <a aria-label="GitHub profile of Luis Velasco" href="https://github.com/LuisRoft" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
                     <i class="uil uil-github"></i>
-                    <span>luisRoftl</span>
+                    luisRoftl
                 </a>
             </li>
             <li>
-                <a href="https://x.com/LuisRoftl" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
+                <a aria-label="Twitter profile of Luis Velasco" href="https://x.com/LuisRoftl" target="_blank" class="text-textPrimary dark:text-darkTextSecondary"  rel="noopener noreferrer">
                     <i class="uil uil-twitter"></i>
-                    <span>luisRoftl</span>
+                    luisRoftl
                 </a>
             </li>
-            <CVButton />
+            <li>
+                <CVButton />
+            </li>
         </ul>
     </div>
     <div class="flex-1">
@@ -53,28 +56,11 @@ const i18n = getI18N({ currentLocale })
             {i18n.TECH_FAVORITAS_DESC}
         </SubSection>
         <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            
-            <Techology text="ReactJs">
-                <i class="devicon-react-original colored"></i>
-            </Techology>
-            <Techology text="NextJS">
-                <i class="devicon-nextjs-plain colored"></i>
-            </Techology>
-            <Techology text="NodeJs">
-                <i class="devicon-nodejs-plain colored"></i>
-            </Techology>
-            <Techology text="NestJs">
-                <i class="devicon-nestjs-original colored"></i>
-            </Techology>
-            <Techology text="Astro">
-                <i class="devicon-astro-plain colored"></i>
-            </Techology>
-            <Techology text="TypeScript">
-                <i class="devicon-typescript-plain colored"></i>
-            </Techology>
-            <Techology text="Docker">
-                <i class="devicon-docker-plain colored"></i>
-            </Techology>
+            {techs.map(tech => (
+                <li class="flex items-center gap-4">
+                    <Techology text={tech.name} icon={tech.icon} />
+                </li>
+            ))}
         </ul>
 
         <SubSection title={i18n.EXPERIENCIA} margin={true}>

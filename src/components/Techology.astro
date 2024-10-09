@@ -1,14 +1,13 @@
 ---
 interface Props {
     text: string;
+    icon: string;
 }
 
-const { text } = Astro.props;
+const { text, icon } = Astro.props;
 ---
 
-<li class="flex items-center gap-4">
-    <span class="w-11 h-11 grid place-content-center border-t border-transparent shadow dark:shadow-none bg-darKText dark:bg-darkBg rounded-lg text-xl">
-        <slot />
-    </span>
-    <span class="text-textPrimary dark:text-darKText">{text}</span>
-</li>
+<span class="w-11 h-11 grid place-content-center border-t border-transparent shadow dark:shadow-none bg-darKText dark:bg-darkBg rounded-lg text-xl">
+    <i class=`devicon-${icon} colored`></i>
+</span>
+<span class="text-textPrimary dark:text-darKText">{text}</span>

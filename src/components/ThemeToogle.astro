@@ -1,13 +1,14 @@
 <button type="button" id="theme-selector" class="px-2 py-1 rounded bg-yellow dark:bg-darkBg text-textPrimary dark:text-darKText">
   <span class="sr-only">Enable <span class="dark:hidden">light</span><span class="hidden dark:inline">dark</span> mode</span>
-  <p class="hidden dark:inline">
+  <span class="hidden dark:inline">
     <i class="uil uil-moon"></i>
-  <p class="dark:hidden">
+  </span>
+  <span class="dark:hidden">
     <i class="uil uil-sun"></i>
-  </p>
-  
-  
+  </span>
 </button>
+
+
 
 <script>
   document.getElementById('theme-selector')?.addEventListener('click', () => {

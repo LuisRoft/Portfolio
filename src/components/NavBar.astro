@@ -17,12 +17,16 @@ const translatePath = useTranslatedPath(lang);
             {t('nav.inicio')}
           </NavBarLink>
         </li>
-        <li><NavBarLink href={translatePath('/proyectos')}>
-          {t('nav.proyectos')}
-        </NavBarLink></li>
-        <li><NavBarLink href='/blog'>
-          {t('nav.blog')}
-        </NavBarLink></li>
+        <li>
+          <NavBarLink href={translatePath('/proyectos')}>
+            {t('nav.proyectos')}
+          </NavBarLink>
+        </li>
+        <li>
+          <NavBarLink href='/blog'>
+            {t('nav.blog')}
+          </NavBarLink>
+        </li>
     </ul>
   </nav>
   

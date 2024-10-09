@@ -21,7 +21,7 @@ const { title, description, technologies, repoLink, repoFrontendLink, repoBacken
     <div class="flex items-center justify-between">
         <h2 class="font-medium dark:text-darKText">
             {repoLink ? (
-                <a class="hover:text-primary dark:hover:text-yellow inline-flex gap-1 items-center" href={repoLink} target="_blank" rel="noopener noreferrer">
+                <a aria-label="Link to enter to repository link" class="hover:text-primary dark:hover:text-yellow inline-flex gap-1 items-center" href={repoLink} target="_blank" rel="noopener noreferrer">
                     {title}
                     <span><i class="devicon-github-original"></i></span>
                 </a>
@@ -32,7 +32,7 @@ const { title, description, technologies, repoLink, repoFrontendLink, repoBacken
 
         {webLink && (
             <div class="rounded-md relative bg-green-300 dark:bg-green-400 px-2 font-semibold">
-                <a class="text-textPrimary text-sm" href={webLink} target="_blank" rel="noopener noreferrer">
+                <a class="text-textPrimary text-sm" aria-label="Link to enter to web" href={webLink} target="_blank" rel="noopener noreferrer">
                     web
                 </a>
                 <div class="absolute -top-1 -right-1">
@@ -49,7 +49,7 @@ const { title, description, technologies, repoLink, repoFrontendLink, repoBacken
         <div class="flex items-center gap-2 mt-2">
             {repoFrontendLink && (
                 <div class="bg-blue-300 hover:bg-blue-400 flex items-center rounded px-1.5 py-1 text-xs dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold">
-                    <a class="inline-flex gap-1 items-center" href={repoFrontendLink} target="_blank" rel="noopener noreferrer">
+                    <a class="inline-flex gap-1 items-center" href={repoFrontendLink} target="_blank" rel="noopener noreferrer" aria-label="Link to entero to fronted repository">
                         Frontend
                         <span><i class="devicon-github-original"></i></span>
                     </a>
@@ -58,7 +58,7 @@ const { title, description, technologies, repoLink, repoFrontendLink, repoBacken
     
             {repoBackendLink && (
                 <div class="bg-blue-300 hover:bg-blue-400 flex items-center rounded px-1.5 py-1 text-xs dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold">
-                    <a class="inline-flex gap-1 items-center" href={repoBackendLink} target="_blank" rel="noopener noreferrer">
+                    <a class="inline-flex gap-1 items-center" href={repoBackendLink} target="_blank" rel="noopener noreferrer" aria-label="Link to entero to backend repository">
                         Backend
                         <span><i class="devicon-github-original"></i></span>
                     </a>
