@@ -24,7 +24,7 @@
   "EXPERIENCIAS": {
     "AFIF_EXPERIENCIA_COMPANY": "Afifsystems",
     "AFIF_EXPERIENCIA_ROL": "Desarrollador Full Stack",
-    "AFIF_EXPERIENCIA_FECHA": "Agosto 2024 - Actualidad",
+    "AFIF_EXPERIENCIA_FECHA": "Julio 2023 - Actualidad",
     "AFIF_EXPERIENCIA_DESC": "Desarrollo de soluciones de software a medida. Implementación y optimización de una arquitectura de microservicios, mejorando la escalabilidad y mantenibilidad del sistema. Experiencia en la gestión de pipelines CI/CD utilizando BitBucket, asegurando procesos de despliegue eficientes y sin problemas. Uso de Docker para la contenerización y aprovechamiento de servicios de AWS para soluciones robustas en la nube.",
 
     "GENESIS_EXPERIENCIA_COMPANY": "Genesis",
