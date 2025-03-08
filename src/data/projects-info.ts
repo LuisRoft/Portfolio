@@ -1,19 +1,5 @@
 import { getI18N } from "../i18n";
-
-interface Tech {
-  name: string;
-  icon: string;
-}
-
-interface Project {
-  title: string;
-  description: string;
-  webLink?: string;
-  repoLink?: string;
-  repoFrontendLink?: string;
-  repoBackendLink?: string;
-  technologies: Tech[];
-}
+import type { Project } from "../types/projects";
 
 export const getProjects = (currentLocale: string) => {
   const i18n = getI18N({ currentLocale });
@@ -27,17 +13,6 @@ export const getProjects = (currentLocale: string) => {
         { name: "React Native", icon: "react-plain" },
         { name: "Firebase", icon: "firebase-plain" },
         { name: "Tailwind CSS", icon: "tailwindcss-plain" },
-      ],
-    },
-    {
-      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_CINEMAN,
-      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_CINEMAN_DESC,
-      webLink: "https://luisroft.github.io/MOVIE-API-REST/",
-      repoLink: "https://github.com/LuisRoft/MOVIE-API-REST",
-      technologies: [
-        { name: "JavaScript", icon: "javascript-plain" },
-        { name: "HTML", icon: "html5-plain" },
-        { name: "CSS", icon: "css3-plain" },
       ],
     },
     {
@@ -59,6 +34,27 @@ export const getProjects = (currentLocale: string) => {
         { name: "TypeScript", icon: "typescript-plain" },
         { name: "MongoDB", icon: "mongodb-plain" },
         { name: "Docker", icon: "docker-plain" },
+      ],
+    },
+    // {
+    //   title: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_PUCEM,
+    //   description: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_PUCEM_DESC,
+    //   technologies: [
+    //     { name: "NextJS", icon: "nextjs-plain" },
+    //     { name: "Tailwind CSS", icon: "tailwindcss-plain" },
+    //     { name: "TypeScript", icon: "typescript-plain" },
+    //   ],
+    // },
+    {
+      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_ANT,
+      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_ANT_DESC,
+      repoLink: "https://github.com/LuisRoft/Scrapping-ANT",
+      technologies: [
+        { name: "NodeJS", icon: "nodejs-plain" },
+        { name: "TypeScript", icon: "typescript-plain" },
+        { name: "Playwright", icon: "playwright-plain" },
+        { name: "AI SDK", icon: "vercel-plain" },
+        { name: "Gemini-AI" },
       ],
     },
   ];
@@ -87,10 +83,12 @@ export const getProjects = (currentLocale: string) => {
       ],
     },
     {
-      title: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_PUCEM,
-      description: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_PUCEM_DESC,
+      title: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_MPOWERTRADE,
+      description: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_MPOWERTRADE_DESC,
+      webLink: "https://www.mpowertrade.com/",
+      repoLink: "",
       technologies: [
-        { name: "NextJS", icon: "nextjs-plain" },
+        { name: "Astro", icon: "astro-plain" },
         { name: "Tailwind CSS", icon: "tailwindcss-plain" },
         { name: "TypeScript", icon: "typescript-plain" },
       ],

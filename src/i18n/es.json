@@ -44,12 +44,12 @@
   "PROYECTOS_PERSONALES_LISTA": {
     "PROYECTO_UTRACE": "Utrace",
     "PROYECTO_UTRACE_DESC": "uTrace es una aplicación móvil desarrollada con React Native que te permite rastrear y gestionar tus emociones diarias, así como tus actividades. También cuenta con una función de informes para visualizar tu progreso emocional.",
-    "PROYECTO_CINEMAN": "Cineman",
-    "PROYECTO_CINEMAN_DESC": "Cineman es una aplicación de cine para buscar información sobre películas, como: las más populares, próximos estrenos y detalles específicos (puntaje, categoría y películas relacionadas). Además, la aplicación cuenta con la opción para marcar tus películas favoritas.",
     "PROYECTO_MICRO_SHOP": "Micro Shop",
     "PROYECTO_MICRO_SHOP_DESC": "Micro-Nest-Shop es un proyecto de demostración que implementa una arquitectura de microservicios utilizando NestJS. El proyecto simula una tienda en línea básica con servicios para usuarios, productos y pedidos. Aunque actualmente no tiene una lógica de negocio completa ni interacción con bases de datos, sirve como una excelente base para entender y construir sistemas basados en microservicios con NestJS.",
     "PROYECTO_POKEDEX": "Pokedex",
-    "PROYECTO_POKEDEX_DESC": "Pokedex es una API que permite a los usuarios realizar peticiones CRUD. La API cuenta con una base de datos de pokemones, y permite a los usuarios buscar, editar y eliminar pokemones por nombre o ID."
+    "PROYECTO_POKEDEX_DESC": "Pokedex es una API que permite a los usuarios realizar peticiones CRUD. La API cuenta con una base de datos de pokemones, y permite a los usuarios buscar, editar y eliminar pokemones por nombre o ID.",
+    "PROYECTO_ANT": "ANT Scrapping",
+    "PROYECTO_ANT_DESC": "Este proyecto es un web scraper que extrae información de la web de la ANT (Agencia Nacional de Tránsito) sobre citaciones. El scraper recupera datos como la placa del vehículo, el tipo de citación y el monto a pagar. Los datos son analizados por IA y enviados al usuario por correo electrónico o telegram."
   },
   "PROYECTOS_PROFESIONALES": "Proyectos Profesionales",
   "PROYECTOS_PROFESIONALES_LISTA": {
@@ -58,6 +58,8 @@
     "PROYECTO_GENESIS": "Genesis Proformas",
     "PROYECTO_GENESIS_DESC": "Este es un proyecto full stack que consta de una aplicación web y una API REST. La aplicación web permite a los usuarios subir imágenes de las proformas y obtener una tabla comparativa de productos y precios, destacando los precios más baratos y el proveedor correspondiente. Se utilizó la API de OpenAI para la comparación de precios.",
     "PROYECTO_PUCEM": "Sistema Médico PUCEM - Frontend",
-    "PROYECTO_PUCEM_DESC": "Este es un sistema web desarrollado para la Pontificia Universidad Católica del Ecuador Sede Manabí (PUCEM), que abarca tres áreas de las ciencias de la salud: medicina, fisioterapia y enfermería. El sistema forma parte del proyecto de seguimiento médico a personas dependientes en Portoviejo."
+    "PROYECTO_PUCEM_DESC": "Este es un sistema web desarrollado para la Pontificia Universidad Católica del Ecuador Sede Manabí (PUCEM), que abarca tres áreas de las ciencias de la salud: medicina, fisioterapia y enfermería. El sistema forma parte del proyecto de seguimiento médico a personas dependientes en Portoviejo.",
+    "PROYECTO_MPOWERTRADE": "Mpowertrade",
+    "PROYECTO_MPOWERTRADE_DESC": "Desarrollé una aplicación web para Mpowertrade, una empresa enfocada en empoderar a mujeres emprendedoras. La plataforma ofrece servicios de asesoría estratégica, creación de contenido y transformación digital, ayudando a las usuarias a crecer y liderar sus negocios de manera efectiva."
   }
 }

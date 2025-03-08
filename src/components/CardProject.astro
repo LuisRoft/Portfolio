@@ -1,8 +1,5 @@
 ---
-interface Tech {
-    name: string;
-    icon: string;
-}
+import { type Tech } from '../types/projects';
 
 interface Props {
     title: string;
@@ -20,16 +17,11 @@ const { title, description, technologies, repoLink, repoFrontendLink, repoBacken
 <li class="border dark:border-zinc-600 bg-blue-100 dark:bg-darkBg rounded-lg p-5">
     <div class="flex items-center justify-between">
         <h2 class="font-medium dark:text-darKText">
-            {repoLink ? (
-                <a aria-label="Link to enter to repository link" class="hover:text-primary dark:hover:text-yellow inline-flex gap-1 items-center" href={repoLink} target="_blank" rel="noopener noreferrer">
-                    {title}
-                    <span><i class="devicon-github-original"></i></span>
-                </a>
-            ) : (
+            
                 <span>{title}</span>
-            )}
+            
         </h2>
-
+        <div class="flex gap-2">
         {webLink && (
             <div class="rounded-md relative bg-green-300 dark:bg-green-400 px-2 font-semibold">
                 <a class="text-textPrimary text-sm" aria-label="Link to enter to web" href={webLink} target="_blank" rel="noopener noreferrer">
@@ -43,29 +35,42 @@ const { title, description, technologies, repoLink, repoFrontendLink, repoBacken
                 </div>
             </div>
         )}
+        {
+            repoLink && (
+                <a class="rounded-md bg-gray-300 text-xs  hover:bg-gray-400 py-0.5  dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold px-2 " href={repoLink} target="_blank" rel="noopener noreferrer" aria-label="Link to enter to repository">
+                    Repo
+                    <span class="text-sm" aria-label="Link to enter to repository" >
+                        <i class="devicon-github-original" />
+                    </span>
+                    
+                </a>
+            )
+        }
+        {(repoFrontendLink || repoBackendLink) && (
+            <div class="flex items-center gap-2">
+                {repoFrontendLink && (
+                    <div class="bg-gray-300 hover:bg-gray-400 flex items-center rounded px-1.5 py-1 text-xs dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold">
+                        <a class="inline-flex gap-1 items-center" href={repoFrontendLink} target="_blank" rel="noopener noreferrer" aria-label="Link to entero to fronted repository">
+                            Frontend
+                            <span><i class="devicon-github-original"></i></span>
+                        </a>
+                    </div>
+                )}
+        
+                {repoBackendLink && (
+                    <div class="bg-gray-300 hover:bg-gray-400 flex items-center rounded px-1.5 py-1 text-xs dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold">
+                        <a class="inline-flex gap-1 items-center" href={repoBackendLink} target="_blank" rel="noopener noreferrer" aria-label="Link to entero to backend repository">
+                            Backend
+                            <span><i class="devicon-github-original"></i></span>
+                        </a>
+                    </div>
+                )}
+            </div>
+        )}
+        </div>
     </div>
 
-    {(repoFrontendLink || repoBackendLink) && (
-        <div class="flex items-center gap-2 mt-2">
-            {repoFrontendLink && (
-                <div class="bg-blue-300 hover:bg-blue-400 flex items-center rounded px-1.5 py-1 text-xs dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold">
-                    <a class="inline-flex gap-1 items-center" href={repoFrontendLink} target="_blank" rel="noopener noreferrer" aria-label="Link to entero to fronted repository">
-                        Frontend
-                        <span><i class="devicon-github-original"></i></span>
-                    </a>
-                </div>
-            )}
     
-            {repoBackendLink && (
-                <div class="bg-blue-300 hover:bg-blue-400 flex items-center rounded px-1.5 py-1 text-xs dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold">
-                    <a class="inline-flex gap-1 items-center" href={repoBackendLink} target="_blank" rel="noopener noreferrer" aria-label="Link to entero to backend repository">
-                        Backend
-                        <span><i class="devicon-github-original"></i></span>
-                    </a>
-                </div>
-            )}
-        </div>
-    )}
 
 
 
@@ -76,7 +81,16 @@ const { title, description, technologies, repoLink, repoFrontendLink, repoBacken
     <ul class="mt-2 flex flex-wrap gap-2">
         {technologies.map((tech) => (
             <li class="dark:bg-textPrimary bg-bodyColor text-textPrimary dark:text-darKText rounded-md px-2 py-1 text-sm flex items-center justify-center gap-1">
-                <i class={`devicon-${tech.icon}`}></i> {tech.name}
+                {
+                    tech.icon ? (
+                        <>
+                        <i class={`devicon-${tech.icon}`}></i> {tech.name}
+                        </>
+                    )  : (
+                    <svg height="1em" style="flex:none;line-height:1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gemini</title><defs><linearGradient id="lobe-icons-gemini-fill" x1="0%" x2="68.73%" y1="100%" y2="30.395%"><stop offset="0%" stop-color="#1C7DFF"></stop><stop offset="52.021%" stop-color="#1C69FF"></stop><stop offset="100%" stop-color="#F0DCD6"></stop></linearGradient></defs><path d="M12 24A14.304 14.304 0 000 12 14.304 14.304 0 0012 0a14.305 14.305 0 0012 12 14.305 14.305 0 00-12 12" fill="url(#lobe-icons-gemini-fill)" fill-rule="nonzero"></path></svg>
+                    <span>{tech.name}</span>
+                    )
+                }
             </li>
         ))}
     </ul>

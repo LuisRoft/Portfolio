@@ -1,0 +1,89 @@
+---
+import CVButton from "./../CVButton.astro";
+import SubSection from "./SubSection.astro";
+import Technology from "./../Technology.astro";
+import TimeLine from "./../TimeLine.astro";
+
+import { getI18N } from "../../i18n"
+import { techs } from "../../data/technologies";
+import { Image } from "astro:assets";
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<section class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
+    <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10 flex flex-col items-center sm:items-start">
+        <div class="w-40 h-40 relative overflow-hidden flex bg-gray-100 dark:bg-gray-800 rounded-lg" style="min-width: 160px; min-height: 160px; aspect-ratio: 1/1;">
+            <Image 
+                width={160} 
+                height={160} 
+                src="/avatar.svg" 
+                class="w-40 h-40 object-cover rounded-lg dark:hidden absolute inset-0" 
+                alt="avatar" 
+                loading="eager" 
+                fetchpriority="high"
+            />
+            <Image 
+                width={160} 
+                height={160} 
+                src="/avatar-dark.svg" 
+                class="w-40 h-40 object-cover rounded-lg hidden dark:block absolute inset-0" 
+                alt="avatar" 
+                loading="eager"
+                fetchpriority="high" 
+            />
+        </div>
+        <h1 class="text-primary dark:text-darKText mt-4 font-bold tracking-tight sm:text-xl">
+            Luis Velasco
+        </h1>
+        <div>
+            <p  class="text-primary dark:text-darkTextSecondary">Software Engineer</p>
+        </div>
+        <ul class="mt-4 flex flex-col items-center sm:items-start">
+            <li>
+                <a aria-label="Linkedin profile of Luis Velasco" href="https://www.linkedin.com/in/luisvelasco27/" target="_blank" class="text-textPrimary dark:text-darkTextSecondary hover:text-primary dark:hover:text-yellow"  rel="noopener noreferrer">
+                    <i class="uil uil-linkedin"></i>
+                    luisVelasco02
+                    
+                </a>
+            </li>
+            <li>
+                <a aria-label="GitHub profile of Luis Velasco" href="https://github.com/LuisRoft" target="_blank" class="text-textPrimary dark:text-darkTextSecondary hover:text-primary dark:hover:text-yellow"  rel="noopener noreferrer">
+                    <i class="uil uil-github"></i>
+                    luisRoftl
+                </a>
+            </li>
+            <li>
+                <a aria-label="Twitter profile of Luis Velasco" href="https://x.com/LuisRoftl" target="_blank" class="text-textPrimary dark:text-darkTextSecondary hover:text-primary dark:hover:text-yellow"  rel="noopener noreferrer">
+                    <i class="uil uil-twitter"></i>
+                    luisRoftl
+                </a>
+            </li>
+            <li>
+                <CVButton />
+            </li>
+        </ul>
+    </div>
+    <div class="flex-1">
+        <SubSection title={i18n.SOBRE_MI}>
+            {i18n.SOBRE_MI_DESC}
+        </SubSection>
+
+        <SubSection title={i18n.TECH_FAVORITAS} margin={true}>
+            {i18n.TECH_FAVORITAS_DESC}
+        </SubSection>
+        <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {techs.map(tech => (
+                <li class="flex items-center gap-4">
+                    <Technology text={tech.name} icon={tech.icon} />
+                </li>
+            ))}
+        </ul>
+
+        <SubSection title={i18n.EXPERIENCIA} margin={true}>
+            {i18n.EXPERIENCIA_DESC}
+        </SubSection>
+        <TimeLine />
+</section>
+

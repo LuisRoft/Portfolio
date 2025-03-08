@@ -1,0 +1,93 @@
+---
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
+import { getLangFromUrl } from "../i18n/utils"
+
+
+interface Props {
+	description: string
+	title: string;
+}
+
+const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph meta tags for social media -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="luisroftl.vercel.app" />
+		<meta property="og:image" content="/social-media.png" />
+		<meta property="og:site_name" content="Link Preview Luis Velasco Portfolio">
+	
+		<!-- Twitter meta tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="/social-media.png" />
+
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+		<script>
+			if (
+			  localStorage.theme === 'dark' ||
+			  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+			  document.documentElement.classList.add('dark');
+			} else {
+			  document.documentElement.classList.remove('dark');
+			}
+		  </script>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="dark:bg-textPrimary bg-skeleton antialiased pt-10 pb-20 2xl:text-lg selection:bg-secondary selection:text-textPrimary dark:selection:bg-gray-700 dark:selection:text-darKText">
+
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: 'Poppins', sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		background-color:#F1F2F6;
+	}
+</style>
+
+<script is:inline>
+	const theme = (() => {
+	  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+		return localStorage.getItem("theme");
+	  }
+	  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		return "dark";
+	  }
+	  return "light";
+	})();
+  
+	if (theme === "light") {
+	  document.documentElement.classList.remove("dark");
+	} else {
+	  document.documentElement.classList.add("dark");
+	}
+	window.localStorage.setItem("theme", theme);
+</script>

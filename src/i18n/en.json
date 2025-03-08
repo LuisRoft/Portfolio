@@ -44,12 +44,12 @@
   "PROYECTOS_PERSONALES_LISTA": {
     "PROYECTO_UTRACE": "Utrace",
     "PROYECTO_UTRACE_DESC": "uTrace is a mobile application developed with React Native that allows you to track and manage your daily emotions as well as your activities. It also features a reporting function to visualize your emotional progress.",
-    "PROYECTO_CINEMAN": "Cineman",
-    "PROYECTO_CINEMAN_DESC": "Cineman is a cinema application for finding information about movies, such as popular films, upcoming releases, and specific movie details (rating, genre, and related movies). Additionally, the app allows you to mark your favorite movies.",
     "PROYECTO_MICRO_SHOP": "Micro Shop",
     "PROYECTO_MICRO_SHOP_DESC": "Micro-Nest-Shop is a demo project that implements a microservices architecture using NestJS. The project simulates a basic online store with services for users, products, and orders. While it currently lacks full business logic and database interaction, it serves as an excellent foundation for understanding and building microservice-based systems with NestJS.",
     "PROYECTO_POKEDEX": "Pokedex",
-    "PROYECTO_POKEDEX_DESC": "Pokedex is an API that allows users to perform CRUD operations. The API has a Pokémon database, and users can search, edit, and delete Pokémon by name or ID."
+    "PROYECTO_POKEDEX_DESC": "Pokedex is an API that allows users to perform CRUD operations. The API has a Pokémon database, and users can search, edit, and delete Pokémon by name or ID.",
+    "PROYECTO_ANT": "ANT Scrapping",
+    "PROYECTO_ANT_DESC": "This project is a web scraper that extracts information from the ANT (Agencia Nacional de Transito) web about citations. The scraper retrieves data such as the license plate, the type of citation, and the amount to be paid. The data is analyzed by IA and sended to the user via email or telegram."
   },
   "PROYECTOS_PROFESIONALES": "Professional Projects",
   "PROYECTOS_PROFESIONALES_LISTA": {
@@ -58,6 +58,8 @@
     "PROYECTO_GENESIS": "Genesis Proformas",
     "PROYECTO_GENESIS_DESC": "This is a full-stack project consisting of a web application and a REST API. The web app allows users to upload proforma images and get a comparative table of products and prices, highlighting the cheapest prices and their providers. The OpenAI API was used for price comparison.",
     "PROYECTO_PUCEM": "PUCEM Medical System - Frontend",
-    "PROYECTO_PUCEM_DESC": "This is a web system developed for the Pontificia Universidad Católica del Ecuador, Manabí Campus (PUCEM), covering three health science areas: medicine, physiotherapy, and nursing. The system is part of a medical monitoring project for dependent individuals in Portoviejo."
+    "PROYECTO_PUCEM_DESC": "This is a web system developed for the Pontificia Universidad Católica del Ecuador, Manabí Campus (PUCEM), covering three health science areas: medicine, physiotherapy, and nursing. The system is part of a medical monitoring project for dependent individuals in Portoviejo.",
+    "PROYECTO_MPOWERTRADE": "Mpowertrade",
+    "PROYECTO_MPOWERTRADE_DESC": "I developed a web application for Mpowertrade, a company focused on empowering women entrepreneurs. The platform offers strategic consulting services, content creation, and digital transformation, helping users grow and lead their businesses effectively."
   }
 }

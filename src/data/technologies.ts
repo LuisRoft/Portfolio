@@ -1,7 +1,4 @@
-interface Tech {
-  name: string;
-  icon: string;
-}
+import type { Tech } from "../types/projects";
 
 export const techs: Tech[] = [
   {
