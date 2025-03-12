@@ -1,0 +1,21 @@
+---
+import ThemeToogle from "./ThemeToogle.astro";
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+---
+
+<header class="flex items-center justify-between mb-8 w-full px-6 lg:px-0 mx-auto max-w-3xl">
+  <a 
+    href={translatePath('/blog')} 
+    class="flex items-center gap-2 text-textPrimary dark:text-darKText hover:text-primary dark:hover:text-yellow transition-colors"
+    aria-label="Back to blog"
+    
+  >
+    <i class="uil uil-arrow-left text-xl"></i>
+    <span class="font-medium">Back to Blog</span>
+  </a>
+  
+  <ThemeToogle />
+</header>

@@ -8,6 +8,7 @@ import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/900.css';
 import NavBar from '../components/NavBar.astro';
 import { getLangFromUrl } from "../i18n/utils"
+import { ViewTransitions } from "astro:transitions";
 
 
 interface Props {
@@ -57,6 +58,9 @@ const lang = getLangFromUrl(Astro.url);
 		  </script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
+
+		
 	</head>
 	<body class="dark:bg-textPrimary bg-skeleton antialiased pt-10 pb-20 2xl:text-lg selection:bg-secondary selection:text-textPrimary dark:selection:bg-gray-700 dark:selection:text-darKText">
 		<NavBar />
@@ -75,20 +79,28 @@ const lang = getLangFromUrl(Astro.url);
 </style>
 
 <script is:inline>
-	const theme = (() => {
-	  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-		return localStorage.getItem("theme");
-	  }
-	  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-		return "dark";
-	  }
-	  return "light";
-	})();
+  function applyTheme() {
+    const theme = (() => {
+      if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+        return localStorage.getItem("theme");
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    })();
+    
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+    window.localStorage.setItem("theme", theme);
+  }
+
+  // Apply on initial load
+  applyTheme();
   
-	if (theme === "light") {
-	  document.documentElement.classList.remove("dark");
-	} else {
-	  document.documentElement.classList.add("dark");
-	}
-	window.localStorage.setItem("theme", theme);
+  // Re-apply on each page navigation
+  document.addEventListener('astro:after-swap', applyTheme);
 </script>

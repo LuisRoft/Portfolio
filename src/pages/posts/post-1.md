@@ -1,29 +1,48 @@
 ---
-layout: ../../layouts/Layout.astro
-title: "My First Blog Post"
-pubDate: 2022-07-01
-description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
+layout: ../../layouts/BlogLayout.astro
+title: "Mi camino en la programación"
+pubDate: 2024-07-02
+description: "Un recorrido por mi viaje desde mis primeros pasos en programación hasta convertirme en desarrollador full stack."
+author: "Luis Velasco"
 image:
   url: "https://docs.astro.build/assets/rose.webp"
   alt: "The Astro logo on a dark background with a pink glow."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["programación", "desarrollo web", "aprendizaje", "experiencia personal"]
 ---
 
-# My First Blog Post
+# Mi camino en la programación
 
-Published on: 2022-07-01
+Bienvenidos a mi blog donde compartiré mi recorrido en el mundo de la programación, desde mis humildes inicios hasta donde estoy hoy.
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+## Mis primeros pasos
 
-## What I've accomplished
+Todo comenzó en primero de bachillerato, cuando un compañero me recomendó un curso gratuito de introducción a la programación. Fue mi primera exposición a este fascinante mundo, donde aprendí los fundamentos de:
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+1. **HTML**: La estructura básica de cualquier página web
+2. **CSS**: El arte de dar estilo y vida visual al contenido
+3. **JavaScript**: Mi primera experiencia con lógica de programación
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+Con estos conocimientos básicos, logré crear mi primer proyecto: un juego estilo Pokémon utilizando Canvas. Aunque era sencillo, sentí una enorme satisfacción al ver funcionar algo creado por mí desde cero.
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+## Evolución profesional
 
-## What's next
+Años después, decidí adentrarme seriamente en el desarrollo web:
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+- **Inicios como Frontend**: Comencé especializándome en la parte visual y de interacción con el usuario
+- **Transición a Full Stack**: Poco a poco, fui aprendiendo tecnologías de backend para completar mi perfil
+
+Actualmente, trabajo como desarrollador full stack y ha sido una de las experiencias más enriquecedoras de mi vida. He aprendido a enfrentar desafíos complejos y a encontrar soluciones eficientes, lo que ha fortalecido mis habilidades técnicas y mi capacidad de trabajo en equipo.
+
+## Mi presente y futuro
+
+Actualmente me apasiona todo el proceso de creación y despliegue de aplicaciones. Me fascina:
+
+- El ciclo completo de desarrollo
+- La arquitectura de soluciones
+- La implementación de nuevas tecnologías
+
+Estoy especialmente entusiasmado con la integración de Inteligencia Artificial en aplicaciones web. Creo firmemente que la IA está transformando nuestra industria y constantemente exploro formas de implementarla en mis proyectos para crear soluciones más inteligentes y eficientes.
+
+Además, me encuentro en mis semestres finales de carrera, donde he tenido la oportunidad de participar en diversos eventos como hackatones, liderar proyectos y asistir a eventos de Google Developer Groups. Estas experiencias han sido fundamentales para fortalecer mi perfil profesional y ampliar mi red de contactos en la industria.
+
+Este blog será mi espacio para compartir conocimientos, experiencias y reflexiones sobre este apasionante viaje. ¡Espero que me acompañes!

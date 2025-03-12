@@ -1,0 +1,92 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getI18N } from "../../i18n";
+
+// Get all markdown posts from the posts directory
+const posts = await Astro.glob('../../pages/posts/*.md');
+// Sort by pubDate, most recent first
+const sortedPosts = posts.sort((a, b) => 
+  new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<Layout title={i18n.SEO.BLOG_TITLE} description={i18n.SEO.BLOG_DESCRIPTION}>
+    <main class="px-6 lg:px-0 mx-auto max-w-4xl">
+        <h1 class="dark:text-darKText text-3xl font-bold mb-10">{i18n.BLOG_TITLE}</h1>
+        
+        <div class="space-y-8">
+            {sortedPosts.map(post => {
+                const formattedDate = new Date(post.frontmatter.pubDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                return (
+                    <article class="group">
+                        <a href={post.url} class="flex flex-col sm:flex-row gap-6 items-start">
+                            {/* Image column - left side */}
+                            <div class="w-full sm:w-1/3 aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-darkBg">
+                                {post.frontmatter.image ? (
+                                    <img 
+                                        src={post.frontmatter.image.url} 
+                                        alt={post.frontmatter.image.alt} 
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"
+                                        transition:name={`post-image-${post.url?.split('/').pop()}`}
+
+                                    />
+                                ) : (
+                                    <div class="w-full h-full flex items-center justify-center text-gray-300 dark:text-gray-700">
+                                        <i class="uil uil-image text-4xl"></i>
+                                    </div>
+                                )}
+                            </div>
+                            
+                            {/* Content column - right side */}
+                            <div class="w-full sm:w-2/3">
+                                {/* Date and tags */}
+                                <div class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                                    <time datetime={post.frontmatter.pubDate}>{formattedDate}</time>
+                                    <span class="h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400"></span>
+                                    <div class="flex flex-wrap gap-2">
+                                        {post.frontmatter.tags && post.frontmatter.tags.map((tag: string, i: number) => (
+                                            <span>
+                                                {i > 0 && ", "}
+                                                <span class="text-primary dark:text-yellow">#{tag}</span>
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                                
+                                {/* Title */}
+                                <h2 class="text-xl font-semibold text-textPrimary dark:text-darKText mb-2 group-hover:text-primary dark:group-hover:text-yellow transition-colors" transition:name={`post-title-${post.url?.split('/').pop()}`}>
+                                    {post.frontmatter.title}
+                                </h2>
+                                
+                                {/* Description */}
+                                <p class="text-textPrimary dark:text-darkTextSecondary mb-3 line-clamp-2">
+                                    {post.frontmatter.description}
+                                </p>
+                                
+                                {/* Read more link */}
+                                <span class="inline-flex items-center text-primary dark:text-yellow text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                                    {i18n.BLOG_READ_MORE} <i class="uil uil-arrow-right ml-1"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                )
+            })}
+        </div>
+        
+        {sortedPosts.length === 0 && (
+            <div class="text-center py-16 border-t dark:border-gray-800">
+                <i class="uil uil-newspaper text-4xl text-gray-300 dark:text-gray-700 mb-4"></i>
+                <p class="text-textPrimary dark:text-darkTextSecondary">No articles available yet.</p>
+            </div>
+        )}
+    </main>
+</Layout>

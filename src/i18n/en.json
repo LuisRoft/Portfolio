@@ -4,7 +4,7 @@
   "SEO": {
     "PROYECTOS_TITLE": "Projects | Luis Velasco",
     "PROYECTOS_DESCRIPTION": "On this page, you'll find a list of projects I've worked on throughout my career. Some of them are personal projects, while others are client-based.",
-    "BLOG_TITLE": "Blog",
+    "BLOG_TITLE": "Blog | Luis Velasco",
     "BLOG_DESCRIPTION": "This is the blog of Luis Velasco, a software engineer specializing in web development. Here, you'll find articles on technology, software development, and best practices."
   },
   "HEADER": {
@@ -61,5 +61,8 @@
     "PROYECTO_PUCEM_DESC": "This is a web system developed for the Pontificia Universidad Católica del Ecuador, Manabí Campus (PUCEM), covering three health science areas: medicine, physiotherapy, and nursing. The system is part of a medical monitoring project for dependent individuals in Portoviejo.",
     "PROYECTO_MPOWERTRADE": "Mpowertrade",
     "PROYECTO_MPOWERTRADE_DESC": "I developed a web application for Mpowertrade, a company focused on empowering women entrepreneurs. The platform offers strategic consulting services, content creation, and digital transformation, helping users grow and lead their businesses effectively."
-  }
+  },
+
+  "BLOG_TITLE": "Recent Posts",
+  "BLOG_READ_MORE": "Read article"
 }

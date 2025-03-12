@@ -4,7 +4,7 @@
   "SEO": {
     "PROYECTOS_TITLE": "Proyectos | Luis Velasco",
     "PROYECTOS_DESCRIPTION": "En esta página encontrarás una lista de proyectos que he realizado a lo largo de mi carrera. Algunos de ellos son personales y otros son proyectos que he desarrollado para clientes.",
-    "BLOG_TITLE": "Blog",
+    "BLOG_TITLE": "Blog | Luis Velasco",
     "BLOG_DESCRIPTION": "Este es el blog de Luis Velasco, ingeniero de software especializado en desarrollo web. Aquí encontrarás artículos sobre tecnología, desarrollo de software y buenas prácticas."
   },
   "HEADER": {
@@ -61,5 +61,8 @@
     "PROYECTO_PUCEM_DESC": "Este es un sistema web desarrollado para la Pontificia Universidad Católica del Ecuador Sede Manabí (PUCEM), que abarca tres áreas de las ciencias de la salud: medicina, fisioterapia y enfermería. El sistema forma parte del proyecto de seguimiento médico a personas dependientes en Portoviejo.",
     "PROYECTO_MPOWERTRADE": "Mpowertrade",
     "PROYECTO_MPOWERTRADE_DESC": "Desarrollé una aplicación web para Mpowertrade, una empresa enfocada en empoderar a mujeres emprendedoras. La plataforma ofrece servicios de asesoría estratégica, creación de contenido y transformación digital, ayudando a las usuarias a crecer y liderar sus negocios de manera efectiva."
-  }
+  },
+
+  "BLOG_TITLE": "Posts Recientes",
+  "BLOG_READ_MORE": "Leer artículo"
 }

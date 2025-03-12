@@ -15,20 +15,24 @@ const i18n = getI18N({ currentLocale })
 <section class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
     <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10 flex flex-col items-center sm:items-start">
         <div class="w-40 h-40 relative overflow-hidden flex bg-gray-100 dark:bg-gray-800 rounded-lg" >
-            <img 
+            <Image 
                 src="/avatar.svg" 
                 class="w-40 h-40 object-cover rounded-lg dark:hidden absolute inset-0" 
                 alt="avatar" 
                 loading="eager" 
                 fetchpriority="high"
+                width={160}
+                height={160}
             />
-            <img 
+            <Image 
      
                 src="/avatar-dark.svg" 
                 class="w-40 h-40 object-cover rounded-lg hidden dark:block absolute inset-0" 
                 alt="avatar" 
                 loading="eager"
                 fetchpriority="high" 
+                width={160}
+                height={160}
             />
         </div>
         <h1 class="text-primary dark:text-darKText mt-4 font-bold tracking-tight sm:text-xl">

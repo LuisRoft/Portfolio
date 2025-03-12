@@ -1,0 +1,209 @@
+---
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import BlogNavBar from '../components/BlogNavBar.astro';
+import { getLangFromUrl } from "../i18n/utils";
+import { getI18N } from "../i18n";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  frontMatter: {
+    title: string;
+    description: string;
+    pubDate: string;
+    author: string;
+    image?: {
+      url: string;
+      alt: string;
+    };
+    tags: string[];
+  };
+}
+
+const { frontMatter } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+
+const formattedDate = new Date(frontMatter.pubDate).toLocaleDateString(currentLocale || 'en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+const postSlug = Astro.url.pathname.split('/').pop();
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={frontMatter.description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph meta tags for social media -->
+    <meta property="og:title" content={frontMatter.title} />
+    <meta property="og:description" content={frontMatter.description} />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={frontMatter.image?.url || "/social-media.png"} />
+    <meta property="og:site_name" content="Luis Velasco Blog">
+    <meta property="article:published_time" content={frontMatter.pubDate} />
+    
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={frontMatter.title} />
+    <meta name="twitter:description" content={frontMatter.description} />
+    <meta name="twitter:image" content={frontMatter.image?.url || "/social-media.png"} />
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <script>
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <title>{frontMatter.title} | Luis Velasco</title>
+    <ViewTransitions />
+  </head>
+  <body class="dark:bg-textPrimary bg-skeleton antialiased pt-10 pb-20 2xl:text-lg selection:bg-secondary selection:text-textPrimary dark:selection:bg-gray-700 dark:selection:text-darKText">
+    <BlogNavBar />
+    
+    <main class="px-6 lg:px-0 mx-auto max-w-3xl">
+      {frontMatter.image && (
+        <div class="w-full aspect-video mb-8 rounded-lg overflow-hidden">
+          <img 
+            src={frontMatter.image.url} 
+            alt={frontMatter.image.alt} 
+            class="w-full h-full object-cover rounded-lg"
+            transition:name={`post-image-${postSlug}`}
+          />
+        </div>
+      )}
+      
+
+      <div class="mb-8" transition:animate="slide">
+        <h1 class="text-3xl sm:text-4xl font-bold text-textPrimary dark:text-darKText mb-4" transition:name={`post-title-${postSlug}`}>
+          {frontMatter.title}
+        </h1>
+        
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-600 dark:text-darkTextSecondary mb-6">
+          <time datetime={frontMatter.pubDate}>{formattedDate}</time>
+          <span class="h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400"></span>
+          <span>By {frontMatter.author}</span>
+        </div>
+        
+        <div class="flex flex-wrap gap-2">
+          {frontMatter.tags.map((tag) => (
+            <span class="text-sm bg-bodyColor dark:bg-darkBg px-3 py-1 rounded-full text-textPrimary dark:text-darkTextSecondary">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      </div>
+      
+
+      <article class="prose prose-blue dark:prose-invert dark:text-darkTextSecondary max-w-none" transition:animate="fade">
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F1F2F6;
+  }
+  
+  /* Markdown specific styling */
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    color: #222222;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+  }
+  
+  .dark .prose h1, .dark .prose h2, .dark .prose h3, .dark .prose h4 {
+    color: #F2EFEF;
+  }
+  
+  .prose p {
+    margin-bottom: 1.25em;
+    line-height: 1.75;
+  }
+  
+  .prose a {
+    color: #1360A9;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  
+  .dark .prose a {
+    color: #DCB529;
+  }
+  
+  .prose code {
+    background-color: #91CAFF;
+    color: #222222;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    font-family: monospace;
+  }
+  
+  .dark .prose code {
+    background-color: #3A3A3A;
+    color: #F2EFEF;
+  }
+  
+  .prose pre {
+    background-color: #222222;
+    color: #F2EFEF;
+    padding: 1em;
+    border-radius: 0.5em;
+    overflow-x: auto;
+  }
+  
+  .dark .prose pre {
+    background-color: #1A1A1A;
+  }
+  
+  .prose ul, .prose ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.25em;
+  }
+  
+  .prose li {
+    margin-bottom: 0.5em;
+  }
+  
+  .prose blockquote {
+    border-left: 4px solid #91CAFF;
+    padding-left: 1em;
+    color: #444;
+    font-style: italic;
+  }
+  
+  .dark .prose blockquote {
+    border-left-color: #DCB529;
+    color: #B3B2B2;
+  }
+</style>
+
+
