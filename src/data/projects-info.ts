@@ -60,16 +60,16 @@ export const getProjects = (currentLocale: string) => {
   ];
 
   const ProProjects: Project[] = [
-    {
-      title: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_ROSVEP,
-      description: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_ROSVEP_DESC,
-      webLink: "https://www.rosvep.com/",
-      technologies: [
-        { name: "Astro", icon: "astro-plain" },
-        { name: "Tailwind CSS", icon: "tailwindcss-plain" },
-        { name: "TypeScript", icon: "typescript-plain" },
-      ],
-    },
+    // {
+    //   title: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_ROSVEP,
+    //   description: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_ROSVEP_DESC,
+    //   webLink: "https://www.rosvep.com/",
+    //   technologies: [
+    //     { name: "Astro", icon: "astro-plain" },
+    //     { name: "Tailwind CSS", icon: "tailwindcss-plain" },
+    //     { name: "TypeScript", icon: "typescript-plain" },
+    //   ],
+    // },
     {
       title: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_GENESIS,
       description: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_GENESIS_DESC,
