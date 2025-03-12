@@ -9,7 +9,7 @@ import { getI18N } from "../i18n";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-  frontMatter: {
+  frontmatter: {
     title: string;
     description: string;
     pubDate: string;
@@ -22,7 +22,7 @@ interface Props {
   };
 }
 
-const { frontMatter } = Astro.props;
+const { frontmatter: frontMatter } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -79,6 +79,7 @@ const postSlug = Astro.url.pathname.split('/').pop();
     <ViewTransitions />
   </head>
   <body class="dark:bg-textPrimary bg-skeleton antialiased pt-10 pb-20 2xl:text-lg selection:bg-secondary selection:text-textPrimary dark:selection:bg-gray-700 dark:selection:text-darKText">
+
     <BlogNavBar />
     
     <main class="px-6 lg:px-0 mx-auto max-w-3xl">
