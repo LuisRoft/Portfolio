@@ -25,17 +25,17 @@ export const getProjects = (currentLocale: string) => {
         { name: "Docker", icon: "docker-plain" },
       ],
     },
-    {
-      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_POKEDEX,
-      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_POKEDEX_DESC,
-      repoLink: "https://github.com/LuisRoft/nest-pokedex",
-      technologies: [
-        { name: "NestJS", icon: "nestjs-plain" },
-        { name: "TypeScript", icon: "typescript-plain" },
-        { name: "MongoDB", icon: "mongodb-plain" },
-        { name: "Docker", icon: "docker-plain" },
-      ],
-    },
+    // {
+    //   title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_POKEDEX,
+    //   description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_POKEDEX_DESC,
+    //   repoLink: "https://github.com/LuisRoft/nest-pokedex",
+    //   technologies: [
+    //     { name: "NestJS", icon: "nestjs-plain" },
+    //     { name: "TypeScript", icon: "typescript-plain" },
+    //     { name: "MongoDB", icon: "mongodb-plain" },
+    //     { name: "Docker", icon: "docker-plain" },
+    //   ],
+    // },
     // {
     //   title: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_PUCEM,
     //   description: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_PUCEM_DESC,
@@ -55,6 +55,28 @@ export const getProjects = (currentLocale: string) => {
         { name: "Playwright", icon: "playwright-plain" },
         { name: "AI SDK", icon: "vercel-plain" },
         { name: "Gemini-AI" },
+      ],
+    },
+    {
+      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_OUTIFY,
+      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_OUTIFY_DESC,
+      technologies: [
+        { name: "Next.js", icon: "nextjs-plain" },
+        { name: "React", icon: "react-plain" },
+        { name: "Tailwind CSS", icon: "tailwindcss-plain" },
+        { name: "LangChain" },
+        { name: "OpenAI" },
+      ],
+    },
+    {
+      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_IAN,
+      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_IAN_DESC,
+      webLink: "https://ian.up.railway.app/",
+      technologies: [
+        { name: "LangChain" },
+        { name: "Python", icon: "python-plain" },
+        { name: "OCR" },
+        { name: "RAG" },
       ],
     },
   ];

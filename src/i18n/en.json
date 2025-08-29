@@ -15,7 +15,7 @@
 
   "CV": "Download CV",
   "SOBRE_MI": "About Me",
-  "SOBRE_MI_DESC": "Hello! My name is Luis, and I’m a Software Engineer specializing in web development and applying best practices to ensure software maintainability. I'm passionate about technology and software development.",
+  "SOBRE_MI_DESC": "Software Engineer with 3+ years of full‑stack experience, focused on modern architectures, FinTech solutions, and AI‑driven apps. Expert in Next.js, NestJS, React, Laravel, and Python, with hands‑on experience implementing LLMs using tools like LangChain for process automation and optimization. Passionate about innovation, system scalability, and building products with real impact.",
   "TECH_FAVORITAS": "Favorite Technologies",
   "TECH_FAVORITAS_DESC": "Throughout my career, I’ve worked with various technologies. I have a passion for exploring new libraries, frameworks, and programming languages. Here’s a list.",
   "EXPERIENCIA": "Experience",
@@ -25,17 +25,23 @@
     "AFIF_EXPERIENCIA_COMPANY": "Afifsystems",
     "AFIF_EXPERIENCIA_ROL": "Full Stack Developer",
     "AFIF_EXPERIENCIA_FECHA": "July 2023 - Present",
-    "AFIF_EXPERIENCIA_DESC": "Development of custom software solutions. Implementing and optimizing a microservices architecture to enhance system scalability and maintainability. Experience managing CI/CD pipelines using BitBucket, ensuring smooth and efficient deployment processes. Utilized Docker for containerization and leveraged AWS services for robust cloud-based solutions.",
+    "AFIF_EXPERIENCIA_DESC": "Designed and optimized a billing platform evolving toward an ERP. Achieved >30% faster processing through code refactoring, external service integrations, and query optimization. Implemented CI/CD with Docker (cut deployment times >40%), led architecture improvements for scalability and maintainability, integrated Meta API for bulk invoice delivery and automated campaigns, and built a scheduling system with concurrency handling using Next.js, NestJS, TypeScript, and rule.js.",
 
     "GENESIS_EXPERIENCIA_COMPANY": "Genesis",
     "GENESIS_EXPERIENCIA_ROL": "Full Stack Developer",
     "GENESIS_EXPERIENCIA_FECHA": "June 2024 - July 2024",
-    "GENESIS_EXPERIENCIA_DESC": "Developed an application that uses the OpenAI API for proforma comparison through image analysis. I gained insights into the OpenAI API and its integration with projects using NestJS.",
+    "GENESIS_EXPERIENCIA_DESC": "Designed and implemented an intelligent analysis solution using the OpenAI API and LLMs for automated proforma comparison via image processing. Integrated flows with LangChain and FastAPI for efficient, scalable processing in an agile environment.",
 
     "MANACLOUD_EXPERIENCIA_COMPANY": "ManaCloud",
     "MANACLOUD_EXPERIENCIA_ROL": "Frontend Developer",
     "MANACLOUD_EXPERIENCIA_FECHA": "January 2024 - April 2024",
     "MANACLOUD_EXPERIENCIA_DESC": "Contributed to the development of a meal reservation platform that improved organizational control by allowing users to reserve meals for the company cafeteria. My responsibilities included implementing CRUD operations for managing periods, meals, and schedules in the admin section. I also helped develop the main user interface for meal reservations."
+  },
+  "EXPERIENCIAS_MPOWERTRADE": {
+    "MPOWERTRADE_EXPERIENCIA_COMPANY": "MPOWERTRADE",
+    "MPOWERTRADE_EXPERIENCIA_ROL": "Frontend Developer",
+    "MPOWERTRADE_EXPERIENCIA_FECHA": "2024",
+    "MPOWERTRADE_EXPERIENCIA_DESC": "Led requirements gathering and functional design for a corporate landing page built with Astro. Optimized images and SEO to improve load speed and search visibility. Enhanced UX with effective CTAs to increase conversion and implemented key metrics for continuous optimization."
   },
 
   "PROYECTOS": "Projects",
@@ -49,7 +55,11 @@
     "PROYECTO_POKEDEX": "Pokedex",
     "PROYECTO_POKEDEX_DESC": "Pokedex is an API that allows users to perform CRUD operations. The API has a Pokémon database, and users can search, edit, and delete Pokémon by name or ID.",
     "PROYECTO_ANT": "ANT Scrapping",
-    "PROYECTO_ANT_DESC": "This project is a web scraper that extracts information from the ANT (Agencia Nacional de Transito) web about citations. The scraper retrieves data such as the license plate, the type of citation, and the amount to be paid. The data is analyzed by IA and sended to the user via email or telegram."
+    "PROYECTO_ANT_DESC": "This project is a web scraper that extracts information from the ANT (Agencia Nacional de Transito) web about citations. The scraper retrieves data such as the license plate, the type of citation, and the amount to be paid. The data is analyzed by IA and sended to the user via email or telegram.",
+    "PROYECTO_OUTIFY": "Outify",
+    "PROYECTO_OUTIFY_DESC": "Hack the Future: AI Sprint (3rd place). An AI‑powered app to optimize planning of outings, meetings, and trips: personalized recommendations, full itineraries, and automatic budgets. Integrations with Google Calendar, WhatsApp, and Telegram for real‑time coordination. Functional MVP built in 7 hours.",
+    "PROYECTO_IAN": "IAN",
+    "PROYECTO_IAN_DESC": "HackIAthon (2nd place). RAG multi‑agent solution with LangChain and OCR to optimize bidding and document analysis in construction: key section classification, inconsistency detection, RUC validation via scraping, and interactive comparisons with dashboard, automatic scoring, and risk traffic‑lighting."
   },
   "PROYECTOS_PROFESIONALES": "Professional Projects",
   "PROYECTOS_PROFESIONALES_LISTA": {
@@ -64,5 +74,16 @@
   },
 
   "BLOG_TITLE": "Recent Posts",
-  "BLOG_READ_MORE": "Read article"
+  "BLOG_READ_MORE": "Read article",
+  "EDUCACION": {
+    "TITLE": "Education",
+    "PUCEM_TITULO": "Software Engineering",
+    "PUCEM_INSTITUCION": "Pontificia Universidad Católica del Ecuador",
+    "PUCEM_LUGAR": "Portoviejo, Ecuador",
+    "PUCEM_FECHA": "2021 - Present",
+    "UNEATLANTICO_TITULO": "Computer Engineering (Exchange)",
+    "UNEATLANTICO_INSTITUCION": "Universidad Europea del Atlántico",
+    "UNEATLANTICO_LUGAR": "Santander, Spain",
+    "UNEATLANTICO_FECHA": "February 2025 - June 2025"
+  }
 }

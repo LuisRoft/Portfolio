@@ -15,7 +15,7 @@
 
   "CV": "Descargar CV",
   "SOBRE_MI": "Sobre mí",
-  "SOBRE_MI_DESC": "¡Hola! Mi nombre es Luis, soy Ingeniero de Software especializado en desarrollo web y en la aplicación de buenas prácticas para asegurar la mantenibilidad del software. Soy apasionado por la tecnología y el desarrollo de software.",
+  "SOBRE_MI_DESC": "Ingeniero de Software con más de 3 años de experiencia full stack, especializado en arquitecturas modernas, soluciones FinTech y aplicaciones impulsadas por IA. Experto en Next.js, NestJS, React, Laravel y Python, con experiencia implementando LLMs con herramientas como LangChain para automatización y optimización de procesos. Apasionado por la innovación, la escalabilidad y la creación de productos con impacto real.",
   "TECH_FAVORITAS": "Tecnologías Favoritas",
   "TECH_FAVORITAS_DESC": "A lo largo de mi carrera he trabajado con diversas tecnologías. Me apasiona la exploración de nuevas librerías, frameworks y lenguajes de programación. Aquí tienes una lista.",
   "EXPERIENCIA": "Experiencia",
@@ -25,17 +25,23 @@
     "AFIF_EXPERIENCIA_COMPANY": "Afifsystems",
     "AFIF_EXPERIENCIA_ROL": "Desarrollador Full Stack",
     "AFIF_EXPERIENCIA_FECHA": "Julio 2023 - Actualidad",
-    "AFIF_EXPERIENCIA_DESC": "Desarrollo de soluciones de software a medida. Implementación y optimización de una arquitectura de microservicios, mejorando la escalabilidad y mantenibilidad del sistema. Experiencia en la gestión de pipelines CI/CD utilizando BitBucket, asegurando procesos de despliegue eficientes y sin problemas. Uso de Docker para la contenerización y aprovechamiento de servicios de AWS para soluciones robustas en la nube.",
+    "AFIF_EXPERIENCIA_DESC": "Diseño y optimización de una plataforma de facturación con proyección a ERP. Mejora >30% en tiempos de procesamiento mediante refactorización, integración con servicios externos y optimización de consultas. Implementación de CI/CD con Docker (reducción >40% en tiempos de despliegue), mejoras de arquitectura para escalar y mantener el sistema, integración de la API de Meta para envío masivo de facturas y campañas automatizadas, y desarrollo de un sistema de agendamiento con manejo de concurrencia usando Next.js, NestJS, TypeScript y rule.js.",
 
     "GENESIS_EXPERIENCIA_COMPANY": "Genesis",
     "GENESIS_EXPERIENCIA_ROL": "Desarrollador Full Stack",
     "GENESIS_EXPERIENCIA_FECHA": "Junio 2024 - Julio 2024",
-    "GENESIS_EXPERIENCIA_DESC": "Desarrollé una aplicación que utiliza la API de OpenAI para la comparación de proformas mediante el análisis de imágenes. Aprendí sobre la API de OpenAI y su integración en proyectos con NestJS.",
+    "GENESIS_EXPERIENCIA_DESC": "Diseñé e implementé una solución de análisis inteligente con la API de OpenAI y LLMs para la comparación automatizada de proformas mediante imágenes. Integré flujos con LangChain y FastAPI para un procesamiento eficiente y escalable en un entorno ágil.",
 
     "MANACLOUD_EXPERIENCIA_COMPANY": "ManaCloud",
     "MANACLOUD_EXPERIENCIA_ROL": "Desarrollador Frontend",
     "MANACLOUD_EXPERIENCIA_FECHA": "Enero 2024 - Abril 2024",
     "MANACLOUD_EXPERIENCIA_DESC": "Contribuí al desarrollo de una plataforma de reserva de comidas que mejoraba el control organizativo, permitiendo a los usuarios reservar comidas para el comedor de la empresa. Mis responsabilidades incluyeron la implementación de CRUD para la gestión de periodos, comidas y horarios en la sección de administración. También colaboré en el desarrollo de la interfaz de usuario principal para las reservas de comida."
+  },
+  "EXPERIENCIAS_MPOWERTRADE": {
+    "MPOWERTRADE_EXPERIENCIA_COMPANY": "MPOWERTRADE",
+    "MPOWERTRADE_EXPERIENCIA_ROL": "Desarrollador Frontend",
+    "MPOWERTRADE_EXPERIENCIA_FECHA": "2024",
+    "MPOWERTRADE_EXPERIENCIA_DESC": "Lideré la toma de requerimientos y diseño funcional de una landing corporativa con Astro. Optimicé imágenes y SEO, mejorando velocidad de carga y visibilidad. Apliqué principios de UI/UX y CTAs efectivos para aumentar conversión e implementé métricas clave para seguimiento y optimización continua."
   },
 
   "PROYECTOS": "Proyectos",
@@ -49,7 +55,11 @@
     "PROYECTO_POKEDEX": "Pokedex",
     "PROYECTO_POKEDEX_DESC": "Pokedex es una API que permite a los usuarios realizar peticiones CRUD. La API cuenta con una base de datos de pokemones, y permite a los usuarios buscar, editar y eliminar pokemones por nombre o ID.",
     "PROYECTO_ANT": "ANT Scrapping",
-    "PROYECTO_ANT_DESC": "Este proyecto es un web scraper que extrae información de la web de la ANT (Agencia Nacional de Tránsito) sobre citaciones. El scraper recupera datos como la placa del vehículo, el tipo de citación y el monto a pagar. Los datos son analizados por IA y enviados al usuario por correo electrónico o telegram."
+    "PROYECTO_ANT_DESC": "Este proyecto es un web scraper que extrae información de la web de la ANT (Agencia Nacional de Tránsito) sobre citaciones. El scraper recupera datos como la placa del vehículo, el tipo de citación y el monto a pagar. Los datos son analizados por IA y enviados al usuario por correo electrónico o telegram.",
+    "PROYECTO_OUTIFY": "Outify",
+    "PROYECTO_OUTIFY_DESC": "Aplicación ganadora (3er lugar) en Hack the Future: AI Sprint. Optimiza la planificación de salidas, reuniones y viajes con IA: recomendaciones personalizadas, itinerarios y presupuestos automáticos. Integración con Google Calendar, WhatsApp y Telegram para coordinación en tiempo real. MVP funcional construido en 7 horas.",
+    "PROYECTO_IAN": "IAN",
+    "PROYECTO_IAN_DESC": "Proyecto ganador (2do lugar) en HackIAthon. Solución RAG multiagente con LangChain y OCR para optimizar licitaciones y análisis documental en construcción: clasificación de secciones, detección de inconsistencias, validación de RUC por scraping y comparativos interactivos con dashboard, scoring automático y semaforización de riesgos."
   },
   "PROYECTOS_PROFESIONALES": "Proyectos Profesionales",
   "PROYECTOS_PROFESIONALES_LISTA": {
@@ -64,5 +74,16 @@
   },
 
   "BLOG_TITLE": "Posts Recientes",
-  "BLOG_READ_MORE": "Leer artículo"
+  "BLOG_READ_MORE": "Leer artículo",
+  "EDUCACION": {
+    "TITLE": "Educación",
+    "PUCEM_TITULO": "Ingeniería en Software",
+    "PUCEM_INSTITUCION": "Pontificia Universidad Católica del Ecuador",
+    "PUCEM_LUGAR": "Portoviejo, Ecuador",
+    "PUCEM_FECHA": "2021 - Actualidad",
+    "UNEATLANTICO_TITULO": "Ingeniería de Informática (Intercambio)",
+    "UNEATLANTICO_INSTITUCION": "Universidad Europea del Atlántico",
+    "UNEATLANTICO_LUGAR": "Santander, España",
+    "UNEATLANTICO_FECHA": "Febrero 2025 - Junio 2025"
+  }
 }

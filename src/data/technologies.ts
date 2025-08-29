@@ -29,4 +29,12 @@ export const techs: Tech[] = [
     name: "Docker",
     icon: "docker-plain",
   },
+  {
+    name: "Python",
+    icon: "python-plain",
+  },
+  {
+    name: "FastAPI",
+    icon: "fastapi-plain",
+  },
 ];
