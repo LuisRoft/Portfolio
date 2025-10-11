@@ -24,7 +24,7 @@
   "EXPERIENCIAS": {
     "AFIF_EXPERIENCIA_COMPANY": "Afifsystems",
     "AFIF_EXPERIENCIA_ROL": "Full Stack Developer",
-    "AFIF_EXPERIENCIA_FECHA": "July 2023 - Present",
+    "AFIF_EXPERIENCIA_FECHA": "July 2023 - September 2025",
     "AFIF_EXPERIENCIA_DESC": "Designed and optimized a billing platform evolving toward an ERP. Achieved >30% faster processing through code refactoring, external service integrations, and query optimization. Implemented CI/CD with Docker (cut deployment times >40%), led architecture improvements for scalability and maintainability, integrated Meta API for bulk invoice delivery and automated campaigns, and built a scheduling system with concurrency handling using Next.js, NestJS, TypeScript, and rule.js.",
 
     "GENESIS_EXPERIENCIA_COMPANY": "Genesis",

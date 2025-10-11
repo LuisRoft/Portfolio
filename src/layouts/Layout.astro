@@ -46,16 +46,19 @@ const lang = getLangFromUrl(Astro.url);
 
 		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-		<script>
-			if (
-			  localStorage.theme === 'dark' ||
-			  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-			) {
-			  document.documentElement.classList.add('dark');
-			} else {
-			  document.documentElement.classList.remove('dark');
+		<script is:inline>
+		(function () {
+			try {
+			const key = "theme";
+			let theme = localStorage.getItem(key);
+			if (!theme) {
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				theme = prefersDark ? "dark" : "light";
 			}
-		  </script>
+			document.documentElement.classList.toggle("dark", theme === "dark");
+			} catch {}
+		})();
+		</script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />

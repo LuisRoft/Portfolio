@@ -24,7 +24,7 @@
   "EXPERIENCIAS": {
     "AFIF_EXPERIENCIA_COMPANY": "Afifsystems",
     "AFIF_EXPERIENCIA_ROL": "Desarrollador Full Stack",
-    "AFIF_EXPERIENCIA_FECHA": "Julio 2023 - Actualidad",
+    "AFIF_EXPERIENCIA_FECHA": "Julio 2023 - Septiembre 2025",
     "AFIF_EXPERIENCIA_DESC": "Diseño y optimización de una plataforma de facturación con proyección a ERP. Mejora >30% en tiempos de procesamiento mediante refactorización, integración con servicios externos y optimización de consultas. Implementación de CI/CD con Docker (reducción >40% en tiempos de despliegue), mejoras de arquitectura para escalar y mantener el sistema, integración de la API de Meta para envío masivo de facturas y campañas automatizadas, y desarrollo de un sistema de agendamiento con manejo de concurrencia usando Next.js, NestJS, TypeScript y rule.js.",
 
     "GENESIS_EXPERIENCIA_COMPANY": "Genesis",

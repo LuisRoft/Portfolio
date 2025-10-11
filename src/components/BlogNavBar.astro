@@ -1,6 +1,6 @@
 ---
-import ThemeToogle from "./ThemeToogle.astro";
 import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+import ThemeSwitch from "./ThemeSwitch";
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
@@ -17,5 +17,5 @@ const translatePath = useTranslatedPath(lang);
     <span class="font-medium">Back to Blog</span>
   </a>
   
-  <ThemeToogle />
+  <ThemeSwitch client:only="react"/>
 </header>

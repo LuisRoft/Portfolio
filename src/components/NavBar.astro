@@ -1,8 +1,8 @@
 ---
 import LanguagePicker from "./LanguagePicker.astro"
 import NavBarLink from "./NavBarLink.astro"
-import ThemeToogle from "./ThemeToogle.astro"
 import { getLangFromUrl, useTranslations, useTranslatedPath, } from '../i18n/utils';
+import ThemeSwitch from "./ThemeSwitch";
 
 
 const lang = getLangFromUrl(Astro.url);
@@ -31,7 +31,7 @@ const translatePath = useTranslatedPath(lang);
   </nav>
   
   <div class="sm:absolute sm:right-0 flex items-center gap-2 font-semibold sm:pr-10">
-    <ThemeToogle />
+    <ThemeSwitch client:only="react"/>
     <LanguagePicker />
   </div>
 </header>
