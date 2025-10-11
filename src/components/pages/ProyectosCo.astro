@@ -13,22 +13,29 @@ const { UProjects, ProProjects } = getProjects(currentLocale ?? "");
 ---
 
 <Layout title={i18n.SEO.PROYECTOS_TITLE} description={i18n.SEO.PROYECTOS_TITLE}>
-    <main class="px-6 lg:px-0 mx-auto max-w-3xl">
+    <main class="px-6 lg:px-0 mx-auto max-w-4xl">
         <h1 class="font-bold text-3xl sm:text-4xl tracking-tight text-textPrimary dark:text-darKText">{i18n.PROYECTOS}</h1>
-        <p class="dark:text-darkTextSecondary text-gray-700 mt-6 max-w-prose leading-relaxed">
+        <p class="dark:text-darkTextSecondary text-gray-700 mt-6 max-w-fit leading-relaxed">
             {i18n.PROYECTOS_DESC}
         </p>
-        <h2 class="text-textPrimary dark:text-darKText mt-12 text-xl font-semibold">{i18n.PROYECTOS_PERSONALES}</h2>
-        <ul class="mt-6 grid grid-cols-1 gap-6">
-            {UProjects.map((project) => (
-                <CardProject {...project}/>
-            ))}
-        </ul>
-        <h2 class="text-textPrimary dark:text-darKText mt-12 text-xl font-semibold">{i18n.PROYECTOS_PROFESIONALES}</h2>
-        <ul class="mt-6 grid grid-cols-1 gap-6">
-            {ProProjects.map((project) => (
-                <CardProject {...project}/>
-            ))}
-        </ul>
+
+        <section class="mt-12">
+            <h2 class="text-textPrimary dark:text-darKText text-xl font-semibold">{i18n.PROYECTOS_PERSONALES}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                {UProjects.map((project) => (
+                    <CardProject {...project}/>
+                ))}
+            </div>
+        </section>
+        
+        <section class="mt-12">
+            <h2 class="text-textPrimary dark:text-darKText text-xl font-semibold">{i18n.PROYECTOS_PROFESIONALES}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                {ProProjects.map((project) => (
+                    <CardProject {...project}/>
+                ))}
+            </div>
+        </section>
     </main>
 </Layout>
+

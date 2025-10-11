@@ -5,7 +5,7 @@ pubDate: 2024-07-02
 description: "Un recorrido por mi viaje desde mis primeros pasos en programación hasta convertirme en desarrollador full stack."
 author: "Luis Velasco"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
+  url: "../public/classroom-ai.png"
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["programación", "desarrollo web", "aprendizaje", "experiencia personal"]
 ---

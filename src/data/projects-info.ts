@@ -6,23 +6,40 @@ export const getProjects = (currentLocale: string) => {
 
   const UProjects: Project[] = [
     {
+      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_IAN,
+      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_IAN_DESC,
+      webLink: "https://ian-fronted.vercel.app/",
+      preview: "ian-shot.png",
+      technologies: [
+        { name: "LangChain" },
+        { name: "Python", icon: "python-plain" },
+        { name: "OCR" },
+        { name: "RAG" },
+      ],
+    },
+    {
+      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_OUTIFY,
+      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_OUTIFY_DESC,
+      repoLink: "https://github.com/STIXGT/outify",
+      webLink: "https://outify-n8o65a1bc-luis-projects-a4d57935.vercel.app/",
+      preview: "outify-shot.png",
+      technologies: [
+        { name: "Next.js", icon: "nextjs-plain" },
+        { name: "React", icon: "react-plain" },
+        { name: "Tailwind CSS", icon: "tailwindcss-plain" },
+        { name: "LangChain" },
+        { name: "OpenAI" },
+      ],
+    },
+    {
       title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_UTRACE,
       description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_UTRACE_DESC,
       repoLink: "https://github.com/LuisRoft/uTrace",
+      preview: "utrace-shot.png",
       technologies: [
         { name: "React Native", icon: "react-plain" },
         { name: "Firebase", icon: "firebase-plain" },
         { name: "Tailwind CSS", icon: "tailwindcss-plain" },
-      ],
-    },
-    {
-      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_MICRO_SHOP,
-      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_MICRO_SHOP_DESC,
-      repoLink: "https://github.com/LuisRoft/micro-nest-shop",
-      technologies: [
-        { name: "NestJS", icon: "nestjs-plain" },
-        { name: "TypeScript", icon: "typescript-plain" },
-        { name: "Docker", icon: "docker-plain" },
       ],
     },
     // {
@@ -49,6 +66,7 @@ export const getProjects = (currentLocale: string) => {
       title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_ANT,
       description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_ANT_DESC,
       repoLink: "https://github.com/LuisRoft/Scrapping-ANT",
+      preview: "ant-shot.png",
       technologies: [
         { name: "NodeJS", icon: "nodejs-plain" },
         { name: "TypeScript", icon: "typescript-plain" },
@@ -58,25 +76,13 @@ export const getProjects = (currentLocale: string) => {
       ],
     },
     {
-      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_OUTIFY,
-      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_OUTIFY_DESC,
+      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_MICRO_SHOP,
+      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_MICRO_SHOP_DESC,
+      repoLink: "https://github.com/LuisRoft/micro-nest-shop",
       technologies: [
-        { name: "Next.js", icon: "nextjs-plain" },
-        { name: "React", icon: "react-plain" },
-        { name: "Tailwind CSS", icon: "tailwindcss-plain" },
-        { name: "LangChain" },
-        { name: "OpenAI" },
-      ],
-    },
-    {
-      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_IAN,
-      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_IAN_DESC,
-      webLink: "https://ian.up.railway.app/",
-      technologies: [
-        { name: "LangChain" },
-        { name: "Python", icon: "python-plain" },
-        { name: "OCR" },
-        { name: "RAG" },
+        { name: "NestJS", icon: "nestjs-plain" },
+        { name: "TypeScript", icon: "typescript-plain" },
+        { name: "Docker", icon: "docker-plain" },
       ],
     },
   ];
@@ -109,6 +115,7 @@ export const getProjects = (currentLocale: string) => {
       description: i18n.PROYECTOS_PROFESIONALES_LISTA.PROYECTO_MPOWERTRADE_DESC,
       webLink: "https://www.mpowertrade.com/",
       repoLink: "",
+      preview: "mpowertrade-shot.png",
       technologies: [
         { name: "Astro", icon: "astro-plain" },
         { name: "Tailwind CSS", icon: "tailwindcss-plain" },

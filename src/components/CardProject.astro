@@ -9,89 +9,120 @@ interface Props {
     repoFrontendLink?: string;
     repoBackendLink?: string;
     technologies: Tech[];
+    preview?: string;
 }
 
-const { title, description, technologies, repoLink, repoFrontendLink, repoBackendLink, webLink } = Astro.props;
+const { title, description, technologies, repoLink, repoFrontendLink, repoBackendLink, webLink, preview } = Astro.props;
 ---
 
-<li class="border dark:border-zinc-600 bg-blue-100 dark:bg-darkBg rounded-lg p-5">
-    <div class="flex items-center justify-between">
-        <h2 class="font-medium dark:text-darKText">
+<article class="group relative overflow-hidden rounded-2xl border border-gray-200 dark:border-zinc-700 bg-white dark:bg-darkBg transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-yellow/5">
+    <!-- Preview Image Section -->
+    {preview && (
+        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-yellow/10 dark:to-primary/10">
+            <img 
+                src={preview} 
+                alt={`${title} preview`}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+    )}
+    
+    <!-- Content Section -->
+    <div class="p-6">
+        <!-- Header with Title and Links -->
+        <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="text-xl font-semibold text-textPrimary dark:text-darKText group-hover:text-primary dark:group-hover:text-yellow transition-colors line-clamp-2">
+                {title}
+            </h3>
             
-                <span>{title}</span>
-            
-        </h2>
-        <div class="flex gap-2">
-        {webLink && (
-            <div class="rounded-md relative bg-green-300 dark:bg-green-400 px-2 font-semibold">
-                <a class="text-textPrimary text-sm" aria-label="Link to enter to web" href={webLink} target="_blank" rel="noopener noreferrer">
-                    web
-                </a>
-                <div class="absolute -top-1 -right-1">
-                    <span class="relative flex h-3 w-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full dark:bg-yellow bg-sky-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full bg-sky-500 h-3 w-3 dark:bg-yellow"></span>
-                    </span>
-                </div>
-            </div>
-        )}
-        {
-            repoLink && (
-                <a class="rounded-md bg-gray-300 text-xs  hover:bg-gray-400 py-0.5  dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold px-2 " href={repoLink} target="_blank" rel="noopener noreferrer" aria-label="Link to enter to repository">
-                    Repo
-                    <span class="text-sm" aria-label="Link to enter to repository" >
-                        <i class="devicon-github-original" />
-                    </span>
-                    
-                </a>
-            )
-        }
-        {(repoFrontendLink || repoBackendLink) && (
-            <div class="flex items-center gap-2">
-                {repoFrontendLink && (
-                    <div class="bg-gray-300 hover:bg-gray-400 flex items-center rounded px-1.5 py-1 text-xs dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold">
-                        <a class="inline-flex gap-1 items-center" href={repoFrontendLink} target="_blank" rel="noopener noreferrer" aria-label="Link to entero to fronted repository">
-                            Frontend
-                            <span><i class="devicon-github-original"></i></span>
-                        </a>
+            <!-- Action Links -->
+            <div class="flex gap-2 flex-shrink-0">
+                {webLink && (
+                    <a 
+                        href={webLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="relative inline-flex items-center justify-center w-9 h-9 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50 transition-colors"
+                        aria-label={`Visit ${title} website`}
+                    >
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </span>
+                    </a>
+                )}
+                
+                {repoLink && (
+                    <a 
+                        href={repoLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-100 dark:bg-zinc-800 text-textPrimary dark:text-darKText hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors"
+                        aria-label={`View ${title} repository`}
+                    >
+                        <i class="devicon-github-original text-base"></i>
+                    </a>
+                )}
+                
+                {(repoFrontendLink || repoBackendLink) && (
+                    <div class="flex gap-1">
+                        {repoFrontendLink && (
+                            <a 
+                                href={repoFrontendLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-100 dark:bg-zinc-800 text-textPrimary dark:text-darKText hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors"
+                                aria-label={`View ${title} frontend repository`}
+                            >
+                                <i class="devicon-github-original text-base"></i>
+                            </a>
+                        )}
+                        {repoBackendLink && (
+                            <a 
+                                href={repoBackendLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-100 dark:bg-zinc-800 text-textPrimary dark:text-darKText hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors"
+                                aria-label={`View ${title} backend repository`}
+                            >
+                                <i class="devicon-github-original text-base"></i>
+                            </a>
+                        )}
                     </div>
                 )}
-        
-                {repoBackendLink && (
-                    <div class="bg-gray-300 hover:bg-gray-400 flex items-center rounded px-1.5 py-1 text-xs dark:hover:bg-yellow dark:bg-textPrimary dark:hover:text-textPrimary dark:text-darKText font-semibold">
-                        <a class="inline-flex gap-1 items-center" href={repoBackendLink} target="_blank" rel="noopener noreferrer" aria-label="Link to entero to backend repository">
-                            Backend
-                            <span><i class="devicon-github-original"></i></span>
-                        </a>
-                    </div>
-                )}
             </div>
-        )}
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm leading-relaxed text-gray-600 dark:text-darkTextSecondary mb-4">
+            {description}
+        </p>
+
+        <!-- Technologies -->
+        <div class="flex flex-wrap gap-2">
+            {technologies.map((tech) => (
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-bodyColor dark:bg-zinc-800 text-textPrimary dark:text-darKText border border-gray-200 dark:border-zinc-700 transition-colors hover:border-primary dark:hover:border-yellow">
+                    {tech.icon ? (
+                        <i class={`devicon-${tech.icon} text-sm`}></i>
+                    ) : (
+                        <svg class="w-3 h-3" style="flex:none;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id={`gradient-${tech.name}`} x1="0%" x2="68.73%" y1="100%" y2="30.395%">
+                                    <stop offset="0%" stop-color="#1C7DFF"></stop>
+                                    <stop offset="52.021%" stop-color="#1C69FF"></stop>
+                                    <stop offset="100%" stop-color="#F0DCD6"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path d="M12 24A14.304 14.304 0 000 12 14.304 14.304 0 0012 0a14.305 14.305 0 0012 12 14.305 14.305 0 00-12 12" fill={`url(#gradient-${tech.name})`} fill-rule="nonzero"></path>
+                        </svg>
+                    )}
+                    {tech.name}
+                </span>
+            ))}
         </div>
     </div>
-
-    
-
-
-
-    <p class="mt-2 leading-relaxed text-gray-700 dark:text-darkTextSecondary">
-        {description}
-    </p>
-
-    <ul class="mt-2 flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-            <li class="dark:bg-textPrimary bg-bodyColor text-textPrimary dark:text-darKText rounded-md px-2 py-1 text-sm flex items-center justify-center gap-1">
-                {
-                    tech.icon ? (
-                        <>
-                        <i class={`devicon-${tech.icon}`}></i> {tech.name}
-                        </>
-                    )  : (
-                    <svg height="1em" style="flex:none;line-height:1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gemini</title><defs><linearGradient id="lobe-icons-gemini-fill" x1="0%" x2="68.73%" y1="100%" y2="30.395%"><stop offset="0%" stop-color="#1C7DFF"></stop><stop offset="52.021%" stop-color="#1C69FF"></stop><stop offset="100%" stop-color="#F0DCD6"></stop></linearGradient></defs><path d="M12 24A14.304 14.304 0 000 12 14.304 14.304 0 0012 0a14.305 14.305 0 0012 12 14.305 14.305 0 00-12 12" fill="url(#lobe-icons-gemini-fill)" fill-rule="nonzero"></path></svg>
-                    <span>{tech.name}</span>
-                    )
-                }
-            </li>
-        ))}
-    </ul>
-</li>
+</article>

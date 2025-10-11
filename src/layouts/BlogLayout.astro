@@ -64,16 +64,6 @@ const postSlug = Astro.url.pathname.split('/').pop();
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
-    <script>
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    </script>
 
     <title>{frontMatter.title} | Luis Velasco</title>
     <ViewTransitions />
@@ -95,7 +85,7 @@ const postSlug = Astro.url.pathname.split('/').pop();
       )}
       
 
-      <div class="mb-8" transition:animate="slide">
+      <div class="mb-8">
         <h1 class="text-3xl sm:text-4xl font-bold text-textPrimary dark:text-darKText mb-4" transition:name={`post-title-${postSlug}`}>
           {frontMatter.title}
         </h1>
@@ -116,7 +106,7 @@ const postSlug = Astro.url.pathname.split('/').pop();
       </div>
       
 
-      <article class="prose prose-blue dark:prose-invert dark:text-darkTextSecondary max-w-none" transition:animate="fade">
+      <article class="prose prose-blue dark:prose-invert dark:text-darkTextSecondary max-w-none" >
         <slot />
       </article>
     </main>

@@ -11,4 +11,5 @@ export interface Project {
   repoFrontendLink?: string;
   repoBackendLink?: string;
   technologies: Tech[];
+  preview?: string; // Image URL for project preview
 }
