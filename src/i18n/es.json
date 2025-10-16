@@ -25,23 +25,23 @@
     "AFIF_EXPERIENCIA_COMPANY": "Afifsystems",
     "AFIF_EXPERIENCIA_ROL": "Desarrollador Full Stack",
     "AFIF_EXPERIENCIA_FECHA": "Julio 2023 - Septiembre 2025",
-    "AFIF_EXPERIENCIA_DESC": "Diseño y optimización de una plataforma de facturación con proyección a ERP. Mejora >30% en tiempos de procesamiento mediante refactorización, integración con servicios externos y optimización de consultas. Implementación de CI/CD con Docker (reducción >40% en tiempos de despliegue), mejoras de arquitectura para escalar y mantener el sistema, integración de la API de Meta para envío masivo de facturas y campañas automatizadas, y desarrollo de un sistema de agendamiento con manejo de concurrencia usando Next.js, NestJS, TypeScript y rule.js.",
+    "AFIF_EXPERIENCIA_DESC": "Diseñé y optimicé una plataforma de facturación electrónica escalable con proyección a ERP para PYMES ecuatorianas.|• Mejoré el rendimiento en >30% mediante refactorización de código y optimización de consultas SQL|• Reduje tiempos de despliegue en >40% implementando CI/CD con Docker y automatización de pipelines|• Integré la API de Meta para envío masivo de facturas vía WhatsApp y campañas automatizadas de marketing|• Desarrollé un sistema de agendamiento de citas con manejo de concurrencia y conflictos en tiempo real|• Lideré mejoras de arquitectura para garantizar escalabilidad, mantenibilidad y mejores prácticas|Tech Stack: Next.js, NestJS, TypeScript, PostgreSQL, Docker, Meta API, rule.js",
 
     "GENESIS_EXPERIENCIA_COMPANY": "Genesis",
     "GENESIS_EXPERIENCIA_ROL": "Desarrollador Full Stack",
     "GENESIS_EXPERIENCIA_FECHA": "Junio 2024 - Julio 2024",
-    "GENESIS_EXPERIENCIA_DESC": "Diseñé e implementé una solución de análisis inteligente con la API de OpenAI y LLMs para la comparación automatizada de proformas mediante imágenes. Integré flujos con LangChain y FastAPI para un procesamiento eficiente y escalable en un entorno ágil.",
+    "GENESIS_EXPERIENCIA_DESC": "Desarrollé una solución de análisis inteligente de proformas usando IA para automatizar comparativas de precios.|• Implementé procesamiento de imágenes con OCR y análisis mediante LLMs (OpenAI GPT-4)|• Diseñé flujos de trabajo automatizados con LangChain para procesamiento eficiente de documentos|• Creé APIs RESTful escalables con FastAPI optimizadas para alta concurrencia|• Reduje tiempo de análisis manual de proformas de horas a minutos con precisión >95%|Tech Stack: Python, FastAPI, LangChain, OpenAI API, OCR, PostgreSQL",
 
     "MANACLOUD_EXPERIENCIA_COMPANY": "ManaCloud",
     "MANACLOUD_EXPERIENCIA_ROL": "Desarrollador Frontend",
     "MANACLOUD_EXPERIENCIA_FECHA": "Enero 2024 - Abril 2024",
-    "MANACLOUD_EXPERIENCIA_DESC": "Contribuí al desarrollo de una plataforma de reserva de comidas que mejoraba el control organizativo, permitiendo a los usuarios reservar comidas para el comedor de la empresa. Mis responsabilidades incluyeron la implementación de CRUD para la gestión de periodos, comidas y horarios en la sección de administración. También colaboré en el desarrollo de la interfaz de usuario principal para las reservas de comida."
+    "MANACLOUD_EXPERIENCIA_DESC": "Contribuí al desarrollo de una plataforma SaaS de reserva de comidas para empresas mejorando el control organizativo.|• Implementé módulos CRUD completos para gestión de periodos, comidas y horarios en el panel administrativo|• Desarrollé la interfaz de usuario principal para el sistema de reservas con UX optimizada|• Integré validaciones en tiempo real y manejo de estados complejos con React Hooks|• Colaboré en sprints ágiles con equipos multidisciplinarios usando metodologías Scrum|Tech Stack: React, TypeScript, Tailwind CSS, React Query, Axios"
   },
   "EXPERIENCIAS_MPOWERTRADE": {
     "MPOWERTRADE_EXPERIENCIA_COMPANY": "MPOWERTRADE",
     "MPOWERTRADE_EXPERIENCIA_ROL": "Desarrollador Frontend",
     "MPOWERTRADE_EXPERIENCIA_FECHA": "2024",
-    "MPOWERTRADE_EXPERIENCIA_DESC": "Lideré la toma de requerimientos y diseño funcional de una landing corporativa con Astro. Optimicé imágenes y SEO, mejorando velocidad de carga y visibilidad. Apliqué principios de UI/UX y CTAs efectivos para aumentar conversión e implementé métricas clave para seguimiento y optimización continua."
+    "MPOWERTRADE_EXPERIENCIA_DESC": "Lideré el desarrollo de una landing page corporativa enfocada en conversión y posicionamiento digital.|• Conduje la recopilación de requerimientos y diseño funcional con stakeholders|• Optimicé imágenes con formatos modernos (WebP, AVIF) mejorando velocidad de carga en 60%|• Implementé estrategias SEO on-page aumentando visibilidad en buscadores|• Diseñé CTAs estratégicos aplicando principios de psicología del usuario para maximizar conversión|• Configuré Google Analytics y métricas clave para tracking y optimización continua|Tech Stack: Astro, TypeScript, Tailwind CSS, SEO, Google Analytics"
   },
 
   "PROYECTOS": "Proyectos",
@@ -70,7 +70,11 @@
     "PROYECTO_PUCEM": "Sistema Médico PUCEM",
     "PROYECTO_PUCEM_DESC": "Sistema de gestión sanitaria para Universidad PUCEM cubriendo medicina, fisioterapia y enfermería. Construido con Next.js para monitoreo eficiente de pacientes en Portoviejo.",
     "PROYECTO_MPOWERTRADE": "Mpowertrade",
-    "PROYECTO_MPOWERTRADE_DESC": "Landing para MPOWERTRADE. Ofrece asesoría estratégica, creación de contenido y transformación digital con UX optimizada y tracking de conversiones."
+    "PROYECTO_MPOWERTRADE_DESC": "Landing para MPOWERTRADE. Ofrece asesoría estratégica, creación de contenido y transformación digital con UX optimizada y tracking de conversiones.",
+    "PROYECTO_PLANIFIA": "Planifia",
+    "PROYECTO_PLANIFIA_DESC": "Sistema integral de gestión de citas con notificaciones multi-canal (WhatsApp, SMS, email). Incluye agendamiento inteligente con vista de calendario, recordatorios automáticos, confirmaciones de citas, administración de clientes con historial completo y alertas en tiempo real para propietarios del negocio.",
+    "PROYECTO_BILLEASE": "Billease",
+    "PROYECTO_BILLEASE_DESC": "Plataforma de facturación electrónica para PYMES en Ecuador. Permite emitir, gestionar y almacenar facturas electrónicas cumpliendo normativas del SRI. Desarrollada con Laravel, PHP y PostgreSQL para una solución robusta y escalable."
   },
 
   "BLOG_TITLE": "Posts Recientes",

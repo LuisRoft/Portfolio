@@ -10,9 +10,17 @@ interface Props {
 
 const { title, company, date, description, recent = false } = Astro.props;
 
-
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
+
+// Dividir la descripción por el separador "|"
+const parts = description.split('|');
+const summary = parts[0]?.trim() || '';
+const achievements = parts.slice(1, -1).map(item => item.trim()).filter(item => item.length > 0);
+const techStack = parts[parts.length - 1]?.trim() || '';
+
+// Extraer tecnologías del Tech Stack
+const technologies = techStack.replace('Tech Stack:', '').trim().split(',').map(tech => tech.trim());
 ---
 
 
@@ -28,4 +36,31 @@ const i18n = getI18N({ currentLocale })
   )}
 </h3>
 <time class="block mb-2 text-sm font-normal leading-none text-gray-700 dark:text-darkTextSecondary">{date}</time>
-<p class="mb-4 sm:text-base text-sm font-normal text-gray-600 dark:text-darkTextSecondary">{description}</p>
+
+<!-- Resumen/Overview -->
+<p class="mb-3 sm:text-base text-sm font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
+  {summary}
+</p>
+
+<!-- Logros y Responsabilidades -->
+{achievements.length > 0 && (
+  <ul class="mb-3 sm:text-sm text-xs text-gray-600 dark:text-darkTextSecondary space-y-1.5">
+    {achievements.map(achievement => (
+      <li class="flex items-start gap-2 leading-relaxed">
+        <span class="text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0">▸</span>
+        <span>{achievement.replace(/^•\s*/, '')}</span>
+      </li>
+    ))}
+  </ul>
+)}
+
+<!-- Tech Stack -->
+{technologies.length > 0 && technologies[0] !== '' && (
+  <div class="flex flex-wrap gap-1.5 mt-3">
+    {technologies.map(tech => (
+      <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+        {tech}
+      </span>
+    ))}
+  </div>
+)}
