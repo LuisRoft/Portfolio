@@ -76,6 +76,20 @@ export const getProjects = (currentLocale: string) => {
       ],
     },
     {
+      title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_AIMAGE,
+      description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_AIMAGE_DESC,
+      repoLink: "https://github.com/LuisRoft/ai-image-trends",
+      webLink: "https://aimage-luisroftl.vercel.app/",
+      preview: "aimage-shot.png",
+      technologies: [
+        { name: "Next.js", icon: "nextjs-plain" },
+        { name: "React", icon: "react-plain" },
+        { name: "Tailwind CSS", icon: "tailwindcss-plain" },
+        { name: "TypeScript", icon: "typescript-plain" },
+        { name: "Gemini-AI" },
+      ],
+    },
+    {
       title: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_MICRO_SHOP,
       description: i18n.PROYECTOS_PERSONALES_LISTA.PROYECTO_MICRO_SHOP_DESC,
       repoLink: "https://github.com/LuisRoft/micro-nest-shop",

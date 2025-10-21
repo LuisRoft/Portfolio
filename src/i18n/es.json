@@ -59,7 +59,9 @@
     "PROYECTO_OUTIFY": "Outify",
     "PROYECTO_OUTIFY_DESC": "3er lugar en Hack the Future. Planificador de viajes con IA que genera itinerarios personalizados, presupuestos automáticos y coordinación en tiempo real vía Google Calendar, WhatsApp y Telegram. MVP en 7 horas.",
     "PROYECTO_IAN": "IAN",
-    "PROYECTO_IAN_DESC": "2do lugar en HackIAthon. Sistema RAG multiagente optimizando licitaciones constructoras con LangChain y OCR. Incluye análisis documental, validación de RUC por scraping y dashboard de scoring de riesgos."
+    "PROYECTO_IAN_DESC": "2do lugar en HackIAthon. Sistema RAG multiagente optimizando licitaciones constructoras con LangChain y OCR. Incluye análisis documental, validación de RUC por scraping y dashboard de scoring de riesgos.",
+    "PROYECTO_AIMAGE": "AImage",
+    "PROYECTO_AIMAGE_DESC": "Biblioteca de prompts para generar las imagenes en tendencia con IA. Los prompts son organizados por categorías y estilos artísticos para facilitar su uso, adicional de los prompts existe la opción de generar imágenes directamente desde la plataforma usando la API de Gemini."
   },
   "PROYECTOS_PROFESIONALES": "Proyectos Profesionales",
   "PROYECTOS_PROFESIONALES_LISTA": {
